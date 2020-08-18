@@ -1,0 +1,19 @@
+div {
+  height: 1.33333rem;
+  float: left;
+}
+
+.div1 {
+  width: 1.33333rem;
+  background: red;
+}
+
+.div2 {
+  width: 6.66667rem;
+  background: blue;
+}
+
+.div3 {
+  width: 2rem;
+  background: green;
+}

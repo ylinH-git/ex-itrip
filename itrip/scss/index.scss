@@ -1,0 +1,35 @@
+@import 'reset';
+
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+a {
+    display: block;
+    font-family: '微软雅黑';
+}
+
+.navBox {
+    ul {
+        li{
+            list-style: none;
+            &.leftImg {
+                background-size: toREM(217) toREM(184);
+                width: toREM(217);
+                height: toREM(184);
+                .trip{
+                    background: url(../images/index01.jpg) 0 0 no-repeat;
+                }
+                
+                a {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    font-size: toREM(32);
+                    color: #fff;
+                }
+            }
+        }
+        
+    }
+}
