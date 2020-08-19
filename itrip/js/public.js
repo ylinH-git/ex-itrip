@@ -31,7 +31,7 @@ Vue.component('wrapper',{
 Vue.component('my-footer',{
     template:`
         <div id="footer">
-            <div class="index"><i></i><div>首 页</div></div>
+            <div class="index on"><i></i><div>首 页</div></div>
             <div class="dest"><i></i><div>目 的 地</div></div>
             <div class="history"><i></i><div>浏览历史</div></div>
             <div class="my"><i></i><div>个 人</div></div>

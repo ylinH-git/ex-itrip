@@ -84,7 +84,7 @@ input:-ms-input-placeholder {
   height: 0.70667rem;
   background: url(../images/sprites.png) 0 0 no-repeat;
   background-size: 10rem auto;
-  background-position: -0.6rem -1.28rem;
+  background-position: -0.57333rem -1.28rem;
 }
 
 #footer > div.dest i {
@@ -99,6 +99,14 @@ input:-ms-input-placeholder {
 
 #footer > div.my i {
   background-position: -3.86667rem -1.28rem;
+}
+
+#footer > div.on {
+  color: #1448ae;
+}
+
+#footer > div.on i {
+  background-position-y: -2.29333rem;
 }
 
 #wrapper {

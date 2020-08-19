@@ -80,7 +80,7 @@ input:-ms-input-placeholder{
             width: toREM(55);
             height: toREM(53);
             @include sprite;
-            background-position: toREM(-45) toREM(-96);
+            background-position: toREM(-43) toREM(-96);
             
         }
         &.dest{
@@ -99,6 +99,12 @@ input:-ms-input-placeholder{
             i{
                 background-position: toREM(-290) toREM(-96);
             }  
+        }
+        &.on{
+            color: #1448ae;
+            i{
+                background-position-y:toREM(-172);
+            } 
         }
     }
     
