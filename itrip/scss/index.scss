@@ -1,35 +1,320 @@
 @import 'reset';
-
-@function toREM($px) {
-    @return $px/75*1rem;
-}
+@import 'public';
 
 a {
     display: block;
     font-family: '微软雅黑';
 }
 
-.navBox {
-    ul {
-        li{
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+// banner
+.banner {
+    width: 10rem;
+    height: toREM(499);
+    position: relative;
+    overflow: hidden;
+
+    .slide {
+        width: 10*5rem;
+        height: toREM(499);
+        position: absolute;
+        left: 0px;
+
+        li {
             list-style: none;
+            float: left;
+
+            img {
+                display: block;
+                width: 10rem;
+            }
+        }
+    }
+
+    .slide-page {
+        position: absolute;
+        margin: 0;
+        right: toREM(41);
+        bottom: toREM(22);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: toREM(62);
+        justify-content: space-around;
+        li {
+            @include borderBox;
+            list-style: none;
+            width: toREM(10);
+            border-radius: 50%;
+            height: toREM(10);
+            border: toREM(1.5) solid #0099cc;
+            &.on {
+                width: toREM(13);
+                height: toREM(13);
+                background: #0099cc;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// nav
+.navBox {
+    padding-top: toREM(11);
+
+    ul {
+        @include borderBox;
+        padding: 0 toREM(15);
+        padding-top: toREM(9);
+
+        li {
+            @include borderBox;
+            list-style: none;
+            float: left;
+
+            a {
+                @include borderBox;
+                line-height: toREM(88);
+                font-size: toREM(32);
+                color: #fff;
+            }
+
             &.leftImg {
-                background-size: toREM(217) toREM(184);
+                margin-right: toREM(7);
+                background-size: contain;
                 width: toREM(217);
                 height: toREM(184);
-                .trip{
-                    background: url(../images/index01.jpg) 0 0 no-repeat;
-                }
-                
+
                 a {
                     width: 100%;
                     height: 100%;
                     text-align: center;
-                    font-size: toREM(32);
-                    color: #fff;
+
+                    &.trip {
+                        background: url(../images/index01.jpg) 0 0 no-repeat;
+                    }
+
+                    &.ticket {
+                        background: url(../images/index02.jpg) 0 0 no-repeat;
+                    }
+
+                    &.hotel {
+                        background: url(../images/index03.jpg) 0 0 no-repeat;
+                    }
+                }
+            }
+
+            &.rightImg {
+                a {
+                    width: toREM(240);
+                    background: #ff9f26;
+                    margin-left: toREM(8);
+                    margin-bottom: toREM(8);
+                    padding-left: toREM(95);
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: toREM(30);
+                        top: toREM(15);
+                        width: toREM(50);
+                        height: toREM(50);
+                        @include sprite;
+                        background-position: toREM(-38) toREM(-245);
+                    }
+
+                    &.gn {
+                        &:before {
+                            background-position: toREM(-125) toREM(-245);
+                        }
+                    }
+
+                    &.zb {
+                        background: #de4a89;
+
+                        &:before {
+                            background-position: toREM(-210) toREM(-245);
+                        }
+                    }
+
+                    &.dd {
+                        background: #7e83e3;
+
+                        &:before {
+                            background-position: toREM(-290) toREM(-245);
+                        }
+                    }
+
+                    &.djjp {
+                        background: #3aace0;
+                        padding-left: toREM(74);
+
+                        .circle {
+                            height: 100%;
+                            width: 100%;
+
+                            i {
+                                position: absolute;
+
+                                left: toREM(30);
+                                background: #fff;
+                                width: toREM(15);
+                                height: toREM(15);
+                                border-radius: 50%;
+
+                                &.top {
+                                    top: toREM(-10);
+                                }
+
+                                &.bottom {
+                                    bottom: toREM(-10);
+                                }
+                            }
+                        }
+
+                        &:before {
+                            background: none;
+                            background-image: linear-gradient(to bottom, #fff 0%, #fff 50%, transparent 75%);
+                            background-size: 2px 11px;
+                            background-repeat: repeat-y;
+                            height: 100%;
+                            width: toREM(2);
+                            top: 0;
+                            left: toREM(36);
+                        }
+                    }
+
+                    &.qchc,
+                    &.zczj,
+                    &.hwjd,
+                    &.gnjd,
+                    &.rmjd,
+                    &.tsjd {
+                        background: #3aace0;
+                        padding-left: 0;
+                        text-align: center;
+
+                        &:before {
+                            background: none;
+                        }
+
+                        &.zczj {
+                            background: #33b6d2;
+                        }
+
+                        &.hwjd,
+                        &.gnjd {
+                            background: #bac731;
+                        }
+
+                        &.rmjd {
+                            background: #82c731;
+                        }
+
+                        &.tsjd {
+                            background: url(../images/icon/btnlist0323_14.jpg);
+                        }
+                    }
+
+                    &.hcp {
+                        background: #31c6cc;
+
+                        &:before {
+                            background-position: toREM(-375) toREM(-245);
+                        }
+                    }
                 }
             }
         }
-        
+
     }
 }
+
+// ad
+.ad{
+    width: 10rem;
+    padding-top: toREM(16);
+}
+
+// itemBox
+.itemBox{
+    padding-left:toREM(24);
+    .title{
+        font-size: toREM(32);
+        color:#3f69bd;
+        line-height: toREM(46);
+        display: flex;
+        padding-top: toREM(26);
+        padding-bottom: toREM(14);
+        i{
+            display: inline-block;
+            width: toREM(46);
+            height: toREM(48);
+            @include sprite;
+            background-position: toREM(-379) toREM(-104);
+            margin-right: toREM(11);
+        }
+    }
+    .items{
+        display: flex;
+        flex-flow: wrap;
+        .item{
+            width: toREM(344);
+            height: toREM(360);
+            @include borderBox;
+            padding-bottom: toREM(24);
+            margin-right: toREM(16);
+            margin-bottom: toREM(16);
+            border: solid 1px #cccccc;
+            img{
+                display: block;
+                width: toREM(344);
+                height: toREM(215);
+            }
+            .text{
+                @include borderBox;
+                margin: toREM(15) toREM(15) toREM(0) toREM(14);
+                color: #333333;
+                font-size: toREM(28);
+                overflow:hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                display:-webkit-box;
+                -webkit-box-orient:vertical;
+            }
+            .detail{
+                margin: toREM(10) toREM(16) toREM(0) toREM(15);
+                font-size: toREM(24);
+                color: #999999;
+                .seat{
+                    padding-top: toREM(5);
+                    float: left;
+                }
+                .price{
+                    float: right;
+                    font-size: toREM(18);
+                    .yen,.mon{
+                        color: #ff9900;
+                        &.mon{
+                            font-size: toREM(28);
+                        }
+                        &.yen{
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

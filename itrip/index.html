@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/index.css">
     <script src="lib/flexible.js"></script>
-    <script src="lib/vue/vue.js"></script>
 </head>
+
 <body>
-    <div class="navBox">
-        <ul>
-            <li class="leftImg"><a href="#" class="trip">旅 游</a></li>
-            <li class="rightImg"><a href="#" class="cj">出 境 游</a></li>
-            <li class="rightImg"><a href="#" class="gn">国 内 游</a></li>
-            <li class="rightImg"><a href="#" class="zb">周 边 游</a></li>
-            <li class="rightImg"><a href="#" class="dd">当 地 游</a></li>
-        </ul>
+    <div id="indexPage">
+        <my-header-1></my-header-1>
+        <wrapper>
+            <banner :imgurl="imgurls"></banner>
+            <div class="navBox">
+                <nav-box-item :key="item.id" :item="item" v-for="item in items"></nav-box-item>
+            </div>
+            <img src="images/img/ad_0328_02.jpg" alt="" class="ad">
+            <div class="itemBox">
+                <div class="title"><i class="title-icon"></i> 特卖汇</div>
+                <items-sell :sellitems="sellitems"></items-sell>
+            </div>
+        </wrapper>
+        <my-footer></my-footer>
     </div>
+    <script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

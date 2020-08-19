@@ -104,18 +104,467 @@ caption, th {
   text-align: left;
 }
 
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:-moz-placeholder {
+  color: #ffffff;
+}
+
+input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+#header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#header .searchIcon {
+  position: absolute;
+  top: 0.37333rem;
+  left: 0.69333rem;
+  width: 0.44rem;
+  height: 0.42667rem;
+  background: url(../images/icon/galss_03.png) 0 0 no-repeat;
+  background-size: contain;
+}
+
+#header input {
+  color: #fff;
+  margin-left: 0.50667rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 8.97333rem;
+  height: 0.70667rem;
+  background-color: transparent;
+  border-radius: 0.66667rem;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  font-size: 0.37333rem;
+  padding-left: 0.8rem;
+}
+
+#header a {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 10rem;
+  height: 1.33333rem;
+  background-color: #ededed;
+  padding: 0;
+  border-top: 1px solid #444;
+  font-size: 0.29333rem;
+  color: #999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer > div {
+  text-align: center;
+}
+
+#footer > div i {
+  display: block;
+  width: 0.73333rem;
+  height: 0.70667rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.6rem -1.28rem;
+}
+
+#footer > div.dest i {
+  margin-left: 0.13333rem;
+  background-position: -1.66667rem -1.28rem;
+}
+
+#footer > div.history i {
+  margin-left: 0.13333rem;
+  background-position: -2.72rem -1.28rem;
+}
+
+#footer > div.my i {
+  background-position: -3.86667rem -1.28rem;
+}
+
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 1.33333rem;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow: auto;
+}
+
+#scroller {
+  position: absolute;
+  z-index: 1;
+  /*	-webkit-touch-callout:none;*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  padding: 0;
+}
+
+#myFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 a {
+  display: block;
   font-family: '微软雅黑';
 }
 
-.indexContent .trip .leftImg {
-  background: url(../images/index01.jpg) 0 0 no-repeat;
-  background-size: 2.89333rem 2.45333rem;
+.banner {
+  width: 10rem;
+  height: 6.65333rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .slide {
+  width: 50rem;
+  height: 6.65333rem;
+  position: absolute;
+  left: 0px;
+}
+
+.banner .slide li {
+  list-style: none;
+  float: left;
+}
+
+.banner .slide li img {
+  display: block;
+  width: 10rem;
+}
+
+.banner .slide-page {
+  position: absolute;
+  margin: 0;
+  right: 0.54667rem;
+  bottom: 0.29333rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0.82667rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.banner .slide-page li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  width: 0.13333rem;
+  border-radius: 50%;
+  height: 0.13333rem;
+  border: 0.02rem solid #0099cc;
+}
+
+.banner .slide-page li.on {
+  width: 0.17333rem;
+  height: 0.17333rem;
+  background: #0099cc;
+}
+
+.banner .slide-page li a {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navBox {
+  padding-top: 0.14667rem;
+}
+
+.navBox ul {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  padding-top: 0.12rem;
+}
+
+.navBox ul li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  float: left;
+}
+
+.navBox ul li a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.17333rem;
+  font-size: 0.42667rem;
+  color: #fff;
+}
+
+.navBox ul li.leftImg {
+  margin-right: 0.09333rem;
+  background-size: contain;
   width: 2.89333rem;
   height: 2.45333rem;
 }
 
-.indexContent .trip .leftImg a {
+.navBox ul li.leftImg a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.navBox ul li.leftImg a.trip {
+  background: url(../images/index01.jpg) 0 0 no-repeat;
+}
+
+.navBox ul li.leftImg a.ticket {
+  background: url(../images/index02.jpg) 0 0 no-repeat;
+}
+
+.navBox ul li.leftImg a.hotel {
+  background: url(../images/index03.jpg) 0 0 no-repeat;
+}
+
+.navBox ul li.rightImg a {
+  width: 3.2rem;
+  background: #ff9f26;
+  margin-left: 0.10667rem;
+  margin-bottom: 0.10667rem;
+  padding-left: 1.26667rem;
+  position: relative;
+}
+
+.navBox ul li.rightImg a:before {
+  content: '';
+  position: absolute;
+  left: 0.4rem;
+  top: 0.2rem;
+  width: 0.66667rem;
+  height: 0.66667rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.50667rem -3.26667rem;
+}
+
+.navBox ul li.rightImg a.gn:before {
+  background-position: -1.66667rem -3.26667rem;
+}
+
+.navBox ul li.rightImg a.zb {
+  background: #de4a89;
+}
+
+.navBox ul li.rightImg a.zb:before {
+  background-position: -2.8rem -3.26667rem;
+}
+
+.navBox ul li.rightImg a.dd {
+  background: #7e83e3;
+}
+
+.navBox ul li.rightImg a.dd:before {
+  background-position: -3.86667rem -3.26667rem;
+}
+
+.navBox ul li.rightImg a.djjp {
+  background: #3aace0;
+  padding-left: 0.98667rem;
+}
+
+.navBox ul li.rightImg a.djjp .circle {
+  height: 100%;
+  width: 100%;
+}
+
+.navBox ul li.rightImg a.djjp .circle i {
+  position: absolute;
+  left: 0.4rem;
+  background: #fff;
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 50%;
+}
+
+.navBox ul li.rightImg a.djjp .circle i.top {
+  top: -0.13333rem;
+}
+
+.navBox ul li.rightImg a.djjp .circle i.bottom {
+  bottom: -0.13333rem;
+}
+
+.navBox ul li.rightImg a.djjp:before {
+  background: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #fff), color-stop(75%, transparent));
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 50%, transparent 75%);
+  background-size: 2px 11px;
+  background-repeat: repeat-y;
+  height: 100%;
+  width: 0.02667rem;
+  top: 0;
+  left: 0.48rem;
+}
+
+.navBox ul li.rightImg a.qchc, .navBox ul li.rightImg a.zczj, .navBox ul li.rightImg a.hwjd, .navBox ul li.rightImg a.gnjd, .navBox ul li.rightImg a.rmjd, .navBox ul li.rightImg a.tsjd {
+  background: #3aace0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.navBox ul li.rightImg a.qchc:before, .navBox ul li.rightImg a.zczj:before, .navBox ul li.rightImg a.hwjd:before, .navBox ul li.rightImg a.gnjd:before, .navBox ul li.rightImg a.rmjd:before, .navBox ul li.rightImg a.tsjd:before {
+  background: none;
+}
+
+.navBox ul li.rightImg a.qchc.zczj, .navBox ul li.rightImg a.zczj.zczj, .navBox ul li.rightImg a.hwjd.zczj, .navBox ul li.rightImg a.gnjd.zczj, .navBox ul li.rightImg a.rmjd.zczj, .navBox ul li.rightImg a.tsjd.zczj {
+  background: #33b6d2;
+}
+
+.navBox ul li.rightImg a.qchc.hwjd, .navBox ul li.rightImg a.qchc.gnjd, .navBox ul li.rightImg a.zczj.hwjd, .navBox ul li.rightImg a.zczj.gnjd, .navBox ul li.rightImg a.hwjd.hwjd, .navBox ul li.rightImg a.hwjd.gnjd, .navBox ul li.rightImg a.gnjd.hwjd, .navBox ul li.rightImg a.gnjd.gnjd, .navBox ul li.rightImg a.rmjd.hwjd, .navBox ul li.rightImg a.rmjd.gnjd, .navBox ul li.rightImg a.tsjd.hwjd, .navBox ul li.rightImg a.tsjd.gnjd {
+  background: #bac731;
+}
+
+.navBox ul li.rightImg a.qchc.rmjd, .navBox ul li.rightImg a.zczj.rmjd, .navBox ul li.rightImg a.hwjd.rmjd, .navBox ul li.rightImg a.gnjd.rmjd, .navBox ul li.rightImg a.rmjd.rmjd, .navBox ul li.rightImg a.tsjd.rmjd {
+  background: #82c731;
+}
+
+.navBox ul li.rightImg a.qchc.tsjd, .navBox ul li.rightImg a.zczj.tsjd, .navBox ul li.rightImg a.hwjd.tsjd, .navBox ul li.rightImg a.gnjd.tsjd, .navBox ul li.rightImg a.rmjd.tsjd, .navBox ul li.rightImg a.tsjd.tsjd {
+  background: url(../images/icon/btnlist0323_14.jpg);
+}
+
+.navBox ul li.rightImg a.hcp {
+  background: #31c6cc;
+}
+
+.navBox ul li.rightImg a.hcp:before {
+  background-position: -5rem -3.26667rem;
+}
+
+.ad {
+  width: 10rem;
+  padding-top: 0.21333rem;
+}
+
+.itemBox {
+  padding-left: 0.32rem;
+}
+
+.itemBox .title {
   font-size: 0.42667rem;
-  color: #fff;
+  color: #3f69bd;
+  line-height: 0.61333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.34667rem;
+  padding-bottom: 0.18667rem;
+}
+
+.itemBox .title i {
+  display: inline-block;
+  width: 0.61333rem;
+  height: 0.64rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -5.05333rem -1.38667rem;
+  margin-right: 0.14667rem;
+}
+
+.itemBox .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.itemBox .items .item {
+  width: 4.58667rem;
+  height: 4.8rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 0.32rem;
+  margin-right: 0.21333rem;
+  margin-bottom: 0.21333rem;
+  border: solid 1px #cccccc;
+}
+
+.itemBox .items .item img {
+  display: block;
+  width: 4.58667rem;
+  height: 2.86667rem;
+}
+
+.itemBox .items .item .text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.2rem 0.2rem 0rem 0.18667rem;
+  color: #333333;
+  font-size: 0.37333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.itemBox .items .item .detail {
+  margin: 0.13333rem 0.21333rem 0rem 0.2rem;
+  font-size: 0.32rem;
+  color: #999999;
+}
+
+.itemBox .items .item .detail .seat {
+  padding-top: 0.06667rem;
+  float: left;
+}
+
+.itemBox .items .item .detail .price {
+  float: right;
+  font-size: 0.24rem;
+}
+
+.itemBox .items .item .detail .price .yen, .itemBox .items .item .detail .price .mon {
+  color: #ff9900;
+}
+
+.itemBox .items .item .detail .price .yen.mon, .itemBox .items .item .detail .price .mon.mon {
+  font-size: 0.37333rem;
+}
+
+.itemBox .items .item .detail .price .yen.yen, .itemBox .items .item .detail .price .mon.yen {
+  float: left;
 }
