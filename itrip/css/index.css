@@ -104,16 +104,27 @@ caption, th {
   text-align: left;
 }
 
+body {
+  width: 10rem;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+a {
+  display: block;
+}
+
 input::-webkit-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input:-moz-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input:-ms-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #header {
@@ -146,7 +157,7 @@ input:-ms-input-placeholder {
   height: 0.70667rem;
   background-color: transparent;
   border-radius: 0.66667rem;
-  border: solid 2px rgba(255, 255, 255, 0.5);
+  border: solid 1px rgba(255, 255, 255, 0.5);
   font-size: 0.37333rem;
   padding-left: 0.8rem;
 }
@@ -167,7 +178,6 @@ input:-ms-input-placeholder {
   height: 1.33333rem;
   background-color: #ededed;
   padding: 0;
-  border-top: 1px solid #444;
   font-size: 0.29333rem;
   color: #999999;
   display: -webkit-box;
@@ -180,11 +190,11 @@ input:-ms-input-placeholder {
           align-items: center;
 }
 
-#footer > div {
+#footer > a {
   text-align: center;
 }
 
-#footer > div i {
+#footer > a i {
   display: block;
   width: 0.73333rem;
   height: 0.70667rem;
@@ -193,25 +203,25 @@ input:-ms-input-placeholder {
   background-position: -0.57333rem -1.28rem;
 }
 
-#footer > div.dest i {
+#footer > a.dest i {
   margin-left: 0.13333rem;
   background-position: -1.66667rem -1.28rem;
 }
 
-#footer > div.history i {
+#footer > a.history i {
   margin-left: 0.13333rem;
   background-position: -2.72rem -1.28rem;
 }
 
-#footer > div.my i {
+#footer > a.my i {
   background-position: -3.86667rem -1.28rem;
 }
 
-#footer > div.on {
+#footer > a.on {
   color: #1448ae;
 }
 
-#footer > div.on i {
+#footer > a.on i {
   background-position-y: -2.29333rem;
 }
 

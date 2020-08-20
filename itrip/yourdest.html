@@ -8,7 +8,7 @@
     <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!-- 忽略页面中的数字识别为电话号码,email识别 -->
-    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="format-detection" content="telephone=no, email=no" />
     <!-- 启用360浏览器的极速模式(webkit) -->
     <meta name="renderer" content="webkit">
     <!-- 避免IE使用兼容模式 -->
@@ -29,37 +29,37 @@
     <meta name="browsermode" content="application">
     <!-- QQ应用模式 -->
     <meta name="x5-page-mode" content="app">
-    <title>index</title>
-    <link rel="stylesheet" href="css/index.css">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dest</title>
+    <link rel="stylesheet" href="css/yourdest.css">
+    <script src="lib/flexible.js"></script>
 </head>
 
 <body>
-    <div id="indexPage">
-        <index-header></index-header>
+    <div id="destPage">
+        <!-- header -->
+        <dest-header></dest-header>
         <wrapper>
-            <template v-slot:inner-scroller>
-                <banner :imgurl="imgurls"></banner>
-            <div class="navBox">
-                <nav-box-item :key="item.id" :item="item" v-for="item in items"></nav-box-item>
-            </div>
-            <img src="images/img/ad_0328_02.jpg" alt="" class="ad">
-            <div class="itemBox">
-                <div class="title"><i class="title-icon"></i> 特卖汇</div>
-                <items-sell :sellitems="sellitems"></items-sell>
-            </div>
+            <template v-slot:outer-scroller>
+                <left-nav :navitems="nav" @choose="changeNav($event)"></left-nav>
             </template> 
+            <template v-slot:inner-scroller>
+                <dest-content :destitems="destitems"></dest-content>
+            </section>
+            </aside></template> 
+            
         </wrapper>
         <my-footer :footer='footer'></my-footer>
     </div>
-    <script src="lib/flexible.js"></script>
-    <script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
-    <script src="js/zepto.min.js"></script>
-    <script src="js/fx.js"></script>
-    <script src="js/touch.js"></script>
-    <script src="lib/vue/vue.js"></script>
-    <script src="js/public.js"></script>
-    <script src="js/index.js"></script>
 </body>
+
+<script src="lib/flexible.js"></script>
+<script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/touch.js"></script>
+<script src="lib/vue/vue.js"></script>
+<script src="js/public.js"></script>
+<script src="js/yourdest.js"></script>
 
 </html>

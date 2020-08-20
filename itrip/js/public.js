@@ -11,30 +11,40 @@ document.addEventListener('touchmove', function (e) {
 }, false);
 document.addEventListener('DOMContentLoaded', loaded, false);
 
-Vue.component('my-header-1', {
+Vue.component('index-header', {
     template: `
-        <div id="header">
+        <header id="header">
             <input type="text" placeholder="搜索旅行地/酒店/景点">
             <i class="searchIcon"></i>
-        </div>
+        </header>
     `
 });
 Vue.component('wrapper',{
     template:`
-    <div id="wrapper">
+        <section id="wrapper">
+                <slot name="outer-scroller"></slot>
             <div id="scroller">
-                <slot></slot>
+                <slot name="inner-scroller"></slot>
             </div>
-        </div>
+        </section>
     `
 })
 Vue.component('my-footer',{
+    props:['footer'],
     template:`
-        <div id="footer">
-            <div class="index on"><i></i><div>首 页</div></div>
-            <div class="dest"><i></i><div>目 的 地</div></div>
-            <div class="history"><i></i><div>浏览历史</div></div>
-            <div class="my"><i></i><div>个 人</div></div>
-        </div>
+        <footer id="footer">
+            <a :key="item.id" v-for="item in footer" :href="item.url" :class="item.classname+' '+item.on"><i></i><div>{{item.text}}</div></a>
+        </footer>
     `
 })
+Vue.component('dest-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#"><i></i></a>选择目的地</div>
+            <div class="searchBox">
+                <i class="searchIcon"></i>
+                <input type="text" placeholder="春季旅游节">
+            </div>
+        </header>
+    `
+});

@@ -4,7 +4,7 @@
 Vue.component('banner', {
     props: ['imgurl'],
     template: `
-    <div class="banner">
+    <section class="banner">
         <ul class="slide">
             <li v-for="img in imgurl"><img :src="img"  alt=""></li>
             <li v-if="index==0" v-for="(img,index) in imgurl"><img :src="img"  alt=""></li>
@@ -13,7 +13,7 @@ Vue.component('banner', {
             <li v-if="index==0" v-for="(img,index) in imgurl" class="on"><a href="#"></a></li>
             <li v-if="index!=0" v-for="(img,index) in imgurl"><a href="#"></a></li>
         </ul>
-    </div>`,
+    </section>`,
     methods: {
         slideAni: function () {
             var page = -1;
@@ -219,6 +219,32 @@ var indexPage = new Vue({
             "images/img/banner3.jpg",
             "images/img/banner4.jpg",
             "images/img/banner1.jpg",
-        ]
+        ],
+        footer: [{
+            id: 0,
+            text: '首 页',
+            classname: 'index',
+            on: 'on',
+            url:'index.html'
+        }, {
+            id: 1,
+            text: '目 的 地',
+            classname: 'dest',
+            on: '',
+            url:'yourdest.html'
+        }, {
+            id: 2,
+            text: '浏览历史',
+            classname: 'history',
+            on: '',
+            url:'#'
+        }, {
+            id: 3,
+            text: '个 人',
+            classname: 'my',
+            on: '',
+            url:'#'
+        }
+    ]
     },
 })

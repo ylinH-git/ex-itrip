@@ -1,0 +1,114 @@
+@import 'public';
+#header{
+    height: toREM(176);
+    background: #1448ae;
+    .title{
+        font-size: toREM(32);
+        color: #ffffff;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-100) toREM(-32);
+            }
+           
+        }
+    }
+    .searchIcon{
+        top: toREM(28+88);
+    }
+}
+#wrapper{
+    top: toREM(176);
+    bottom: toREM(100);
+    .leftNav{
+        z-index: 2;
+        @include borderBox;
+        position: fixed;
+        height: 100%;
+        width: toREM(129);
+        background: #f4f4f4;
+        color: #666666;
+        a{
+            font-size: toREM(32);
+            height: toREM(179);
+            width: toREM(129);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            span{
+                margin-left: toREM(-3);
+                width: 100%;
+                text-align: center;
+            }
+            i{
+                margin-left: toREM(-3);
+                display: block;
+                width: toREM(55);
+                height: toREM(50);
+                @include sprite;
+                background-position: toREM(-453) toREM(-102);
+            }
+            &.gn{
+                i{
+                    background-position: toREM(-538) toREM(-102);
+                }
+            }
+            &.gw{
+                i{
+                    background-position: toREM(-625) toREM(-102);
+                }
+            }
+            &.on{
+                
+                background: #fff;
+                color: #1448ae;
+                border-left: 3px solid #f7c612;
+                i{
+                    background-position-y:toREM(-181);
+                }
+            }
+        }
+    }
+    .destBox{
+        padding-left: toREM(145);
+        padding-top: toREM(16);
+        >div{
+            &:first-child{
+                display: flex;
+            }
+            flex-wrap: wrap;
+            display: none;
+            .item{
+                @include borderBox;
+                width: toREM(288);
+                height: toREM(264);
+                border: 1px solid #cccccc;
+                margin-bottom: toREM(16);
+                margin-right: toREM(8);
+                img{
+                    display: block;
+                    width: toREM(288);
+                }
+                .text{
+                    text-align: center;
+                    font-size: toREM(28);
+                    line-height: toREM(55);
+                }
+            }
+        }
+    }
+}
