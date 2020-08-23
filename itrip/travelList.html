@@ -30,35 +30,31 @@
     <!-- QQ应用模式 -->
     <meta name="x5-page-mode" content="app">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dest</title>
-    <link rel="stylesheet" href="css/yourdest.css">
+    <title>list</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/travellist.css">
 </head>
 
 <body>
-    <div id="destPage">
-        <!-- header -->
-        <dest-header></dest-header>
+    <div id="tList">
+        <tl-header></tl-header>
         <wrapper>
             <template v-slot:outer-scroller>
-                <left-nav :navitems="nav" @choose="changeNav($event)"></left-nav>
-            </template> 
+                <tl-nav :navbtn='list'></tl-nav>
+            </template>
             <template v-slot:inner-scroller>
-                <dest-content :destitems="destitems"></dest-content>
-            </section>
-            </aside></template> 
-            
+                <tl-content v-if="list.status==200" :key="content.id" :list='content' v-for="content in list"></tl-content>
+            </template>
         </wrapper>
-        <my-footer :footer='footer'></my-footer>
+        <my-footer :footer="footer"></my-footer>
     </div>
+    <script src="lib/flexible.js"></script>
+    <script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/travellist.js"></script>
 </body>
-
-<script src="lib/flexible.js"></script>
-<script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
-<script src="js/zepto.min.js"></script>
-<script src="js/fx.js"></script>
-<script src="js/touch.js"></script>
-<script src="lib/vue/vue.js"></script>
-<script src="js/public.js"></script>
-<script src="js/yourdest.js"></script>
 
 </html>

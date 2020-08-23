@@ -1,0 +1,255 @@
+#header {
+  height: 1.17333rem;
+  background: #1448ae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header a i {
+  display: block;
+  margin-top: 0.30667rem;
+  margin-left: 0.56rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .iconBox {
+  position: absolute;
+  top: 0.21333rem;
+  left: 1.06667rem;
+  width: 2.81333rem;
+  height: 0.70667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .iconBox .pos {
+  font-size: 0.37333rem;
+  color: #fff;
+  width: 1.90667rem;
+  border-right: solid 1px rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .iconBox .pos i {
+  width: 0.30667rem;
+  height: 0.41333rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -8.32rem -3.50667rem;
+}
+
+#header .iconBox .pos span {
+  padding-left: 0.13333rem;
+}
+
+#header .iconBox .searchIcon {
+  top: 0.13333rem;
+  left: 2.17333rem;
+  width: 0.44rem;
+  height: 0.42667rem;
+}
+
+#header input {
+  width: 8.22667rem;
+  height: 0.70667rem;
+  margin-left: 1.13333rem;
+  margin-top: 0.21333rem;
+  padding-left: 2.81333rem;
+  padding-bottom: 0.05333rem;
+}
+
+#wrapper {
+  top: 1.17333rem;
+}
+
+#wrapper nav {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 1.2rem;
+  background: #f4f4f4;
+}
+
+#wrapper nav a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0.34667rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.37333rem;
+}
+
+#wrapper nav a.on {
+  background: #fff;
+  color: #1448ae;
+  border-top: 3px solid #f7c612;
+}
+
+#wrapper nav a.on div {
+  margin-top: -0.08rem;
+}
+
+#wrapper #scroller {
+  top: 1.2rem;
+}
+
+#wrapper #scroller .content li {
+  padding: 0.45333rem 0;
+  margin: 0 0.32rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#wrapper #scroller .content li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrapper #scroller .content li a img {
+  width: 2.66667rem;
+  height: 2.33333rem;
+}
+
+#wrapper #scroller .content li a .details {
+  width: 6.45333rem;
+}
+
+#wrapper #scroller .content li a .details .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333333;
+  font-size: 0.37333rem;
+  margin-top: -0.05333rem;
+}
+
+#wrapper #scroller .content li a .details .tab {
+  margin: 0.06667rem 0;
+  font-size: #666;
+  font-size: 0.28rem;
+}
+
+#wrapper #scroller .content li a .details .tab span {
+  display: inline-block;
+  border: 1px solid #999;
+  padding: 0 0.06667rem;
+  margin: 0 0.06667rem;
+}
+
+#wrapper #scroller .content li a .details .tab span.lightTab {
+  border: 0;
+  background: #48c1e2;
+  color: #fff;
+  padding: 0.04rem 0.06667rem;
+}
+
+#wrapper #scroller .content li a .details .desc {
+  font-size: 0.32rem;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#wrapper #scroller .content li a .details .desc .departure {
+  color: #00cc66;
+}
+
+#wrapper #scroller .content li a .details .time {
+  font-size: 0.32rem;
+  color: #666;
+}
+
+#wrapper #scroller .content li a .details .pncg {
+  margin-top: -0.09333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#wrapper #scroller .content li a .details .pncg .price {
+  color: #f88412;
+  font-size: 0.45333rem;
+}
+
+#wrapper #scroller .content li a .details .pncg .price .mon {
+  margin-top: 0.06667rem;
+  font-size: 0.18667rem;
+  float: left;
+}
+
+#wrapper #scroller .content li a .details .pncg .price .qi {
+  font-size: 0.18667rem;
+}
+
+#wrapper #scroller .content li a .details .pncg .np, #wrapper #scroller .content li a .details .pncg .coms {
+  font-size: 0.32rem;
+}
+
+#wrapper #scroller .content li a .details .pncg .np .mark, #wrapper #scroller .content li a .details .pncg .coms .mark {
+  color: #666666;
+}
+
+#wrapper #scroller .content li a .details .pncg .np.coms, #wrapper #scroller .content li a .details .pncg .coms.coms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#wrapper #scroller .content li a .details .pncg .np.coms .grade, #wrapper #scroller .content li a .details .pncg .coms.coms .grade {
+  font-size: 0.18667rem;
+  margin-left: 0.2rem;
+  background: #f6f6f6;
+  border: 1px solid #999;
+  padding: 0rem 0.13333rem;
+}
+
+#wrapper #scroller .content li a .details .pncg .np.coms .grade span, #wrapper #scroller .content li a .details .pncg .coms.coms .grade span {
+  font-weight: bold;
+  font-size: 0.46667rem;
+}

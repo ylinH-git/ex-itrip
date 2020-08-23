@@ -48,3 +48,18 @@ Vue.component('dest-header', {
         </header>
     `
 });
+Vue.component('tl-header', {
+    template: `
+            <header id="header">
+                <a href="#"><i></i></a>
+                <div class="iconBox">
+                    <div class="pos">
+                        <i></i>
+                        <span>北京</span>
+                    </div>
+                    <i class="searchIcon"></i>
+                </div>
+                <input type="text" placeholder="目的地/关键词">
+            </header>
+    `
+});

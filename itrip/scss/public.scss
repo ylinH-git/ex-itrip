@@ -1,35 +1,44 @@
 @import 'reset';
-body{
+
+body {
     width: 10rem;
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    
+
 }
-a{
+
+a {
     display: block;
 }
+
 // iscroll
-@function toREM($px){
+@function toREM($px) {
     @return $px/75*1rem;
 }
+
 @mixin borderBox {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 @mixin sprite {
     background: url(../images/sprites.png) 0 0 no-repeat;
     background-size: 10rem auto;
 }
-input::-webkit-input-placeholder{
-    color:rgba($color: #ffffff, $alpha: 0.5);
+
+input::-webkit-input-placeholder {
+    color: rgba($color: #ffffff, $alpha: 0.5);
 }
-input:-moz-placeholder{
-    color:rgba($color: #ffffff, $alpha: 0.5);
+
+input:-moz-placeholder {
+    color: rgba($color: #ffffff, $alpha: 0.5);
 }
-input:-ms-input-placeholder{
-    color:rgba($color: #ffffff, $alpha: 0.5);
+
+input:-ms-input-placeholder {
+    color: rgba($color: #ffffff, $alpha: 0.5);
 }
+
 #header {
     position: absolute;
     z-index: 2;
@@ -38,8 +47,9 @@ input:-ms-input-placeholder{
     width: 100%;
     height: toREM(88);
     line-height: toREM(88);
-    background-color: rgba($color: #000000, $alpha: 0.3);  
-    .searchIcon{
+    background-color: rgba($color: #000000, $alpha: 0.3);
+
+    .searchIcon {
         position: absolute;
         top: toREM(28);
         left: toREM(52);
@@ -48,7 +58,8 @@ input:-ms-input-placeholder{
         background: url(../images/icon/galss_03.png) 0 0 no-repeat;
         background-size: contain;
     }
-    input{
+
+    input {
         color: #fff;
         margin-left: toREM(38);
         @include borderBox;
@@ -56,7 +67,7 @@ input:-ms-input-placeholder{
         height: toREM(53);
         background-color: transparent;
         border-radius: toREM(50);
-        border: solid 1px rgba(255, 255, 255, 0.5);;
+        border: solid 1px rgba(255, 255, 255, 0.5);
         font-size: toREM(28);
         padding-left: toREM(60);
     }
@@ -83,41 +94,56 @@ input:-ms-input-placeholder{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    >a{
+
+    >a {
         text-align: center;
-        i{
+
+        i {
             display: block;
             width: toREM(55);
             height: toREM(53);
             @include sprite;
             background-position: toREM(-43) toREM(-96);
-            
+
         }
-        &.dest{
-            i{
+
+        &.dest {
+            i {
                 margin-left: toREM(10);
                 background-position: toREM(-125) toREM(-96);
-            }  
+            }
         }
-        &.history{
-            i{
+
+        &.history {
+            i {
                 margin-left: toREM(10);
                 background-position: toREM(-204) toREM(-96);
-            }  
+            }
         }
-        &.my{
-            i{
+
+        &.my {
+            i {
                 background-position: toREM(-290) toREM(-96);
-            }  
+            }
         }
-        &.on{
+
+        &.tl {
+            i {
+                margin-left: toREM(10);
+                background-position: toREM(-536) toREM(-257);
+            }
             color: #1448ae;
-            i{
-                background-position-y:toREM(-172);
-            } 
+        }
+
+        &.on {
+            color: #1448ae;
+
+            i {
+                background-position-y: toREM(-172);
+            }
         }
     }
-    
+
 }
 
 #wrapper {
