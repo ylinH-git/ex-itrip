@@ -217,6 +217,15 @@ input:-ms-input-placeholder {
   background-position: -3.86667rem -1.28rem;
 }
 
+#footer > a.tl {
+  color: #1448ae;
+}
+
+#footer > a.tl i {
+  margin-left: 0.13333rem;
+  background-position: -7.14667rem -3.42667rem;
+}
+
 #footer > a.on {
   color: #1448ae;
 }

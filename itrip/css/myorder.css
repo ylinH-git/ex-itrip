@@ -1,0 +1,256 @@
+#header {
+  height: 1.17333rem;
+  background: #1448ae;
+}
+
+#header .title {
+  font-size: 0.42667rem;
+  color: #ffffff;
+  text-align: center;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+}
+
+#header .title a {
+  position: absolute;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header .title a i {
+  display: block;
+  margin-top: 0.37333rem;
+  margin-left: 0.56rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .title a.back {
+  left: 0;
+}
+
+#header .title a.search {
+  width: auto;
+  right: 0;
+  font-size: 0.37333rem;
+  bottom: 0;
+  font-weight: normal;
+  padding-right: 0.52rem;
+}
+
+#wrapper #scroller {
+  height: 100%;
+  top: 1.17333rem;
+}
+
+#wrapper #scroller section {
+  padding: 0.42667rem 0.30667rem;
+  height: 100%;
+}
+
+#wrapper #scroller section .ordersBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 13.06667rem;
+}
+
+#wrapper #scroller section .ordersBox .end {
+  text-align: center;
+  font-size: 0.4rem;
+  color: #999;
+}
+
+#wrapper #scroller section .ordersBox .end .lastYear {
+  margin-top: 0.33333rem;
+  color: #666;
+  width: 3.6rem;
+  height: 0.66667rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#wrapper #scroller section .ordersBox .end .lastYear i {
+  width: 0.26667rem;
+  height: 0.32rem;
+  display: block;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -1.96rem -0.50667rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: -0.4rem;
+}
+
+#wrapper #scroller section .ordersBox .order {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 9.4rem;
+  height: 3.6rem;
+  border-radius: 8px;
+  background: #f4f4f4;
+  padding-left: 1.18667rem;
+  padding-top: 0.46667rem;
+  padding-right: 0.42667rem;
+}
+
+#wrapper #scroller section .ordersBox .order .title {
+  position: relative;
+  color: #333;
+  font-size: 0.45333rem;
+  margin-bottom: 0.26667rem;
+}
+
+#wrapper #scroller section .ordersBox .order .title .price {
+  float: right;
+  font-size: 0.4rem;
+  color: #f88412;
+}
+
+#wrapper #scroller section .ordersBox .order .title::before {
+  position: absolute;
+  top: 0.05333rem;
+  left: -0.76rem;
+  content: '';
+  display: block;
+  width: 0.49333rem;
+  height: 0.49333rem;
+  background: url(../images/icon/order0424.png) center center no-repeat;
+  background-size: contain;
+}
+
+#wrapper #scroller section .ordersBox .order .time {
+  font-size: 0.4rem;
+}
+
+#wrapper #scroller section .ordersBox .order .time span {
+  float: right;
+}
+
+#wrapper #scroller section .ordersBox .order .btnBox {
+  margin-left: 1.56rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrapper #scroller section .ordersBox .order .btnBox button {
+  margin-top: 0.53333rem;
+  width: 1.93333rem;
+  height: 0.8rem;
+  line-height: 0.73333rem;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 0.4rem;
+  color: #1ab2db;
+}
+
+#wrapper #scroller section .ordersBox .order .btnBox button.on {
+  background: #1ab2db;
+  color: #fff;
+}
+
+#footer {
+  background: #999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#footer a {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.4rem;
+}
+
+#footer a.filter i {
+  display: block;
+  width: 0.54667rem;
+  height: 0.58667rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.6rem -8.18667rem;
+  margin-right: 0.2rem;
+}
+
+#footer a.time i {
+  display: block;
+  width: 0.54667rem;
+  height: 0.66667rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -1.68rem -8.13333rem;
+  margin-right: 0.2rem;
+}
+
+#footer a.effective {
+  position: relative;
+}
+
+#footer a.effective i {
+  display: block;
+  width: 0.53333rem;
+  height: 0.53333rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1.5px solid #fff;
+  margin-left: 0.13333rem;
+}
+
+#footer a.effective .right {
+  position: absolute;
+  width: 0.66667rem;
+  height: 0.66667rem;
+  top: -1.33333rem;
+  right: -0.05333rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -3rem -8.13333rem;
+}
+
+#footer a.effective .right:after {
+  content: '';
+  display: block;
+  width: 0.13333rem;
+  height: 0.30667rem;
+  border: 4px solid #37b4db;
+  border-top: 0;
+  border-left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: 0.10667rem;
+  right: 0.13333rem;
+}

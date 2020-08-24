@@ -1,0 +1,151 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+#header{
+    height: toREM(88);
+    background: #1448ae;
+    .title{
+        font-size: toREM(32);
+        color: #ffffff;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-100) toREM(-32);
+            }
+            &.back{
+                left: 0;
+            }
+            &.clear{
+                right: 0;
+                font-size: toREM(28);
+                bottom: 0;
+                font-weight: normal;
+                padding-right: toREM(39);
+            }
+           
+        }
+    }
+}
+#wrapper{
+    #scroller{
+        top: toREM(88);
+        section{
+            padding: toREM(16) toREM(0);
+            font-size: toREM(28);
+            color: #666666;
+            .time{
+                padding-left: toREM(24);
+            }
+            .content{
+                display: flex;
+                position: relative;
+                margin-bottom: toREM(21);
+                &:last-child{
+                    aside{
+                        i:after{
+                            display: none;
+                        }
+                    }
+                }
+                aside{
+                    i{
+                        display: block;
+                        @include sprite;
+                        background-position: toREM(-680) toREM(-255);
+                        width: toREM(45);
+                        height: toREM(45);
+                        border-radius: 50%;
+                        position: absolute;
+                        top: toREM(15);
+                        left: toREM(29);
+                        background-color: #1ab2db;
+                        &:after{
+                            content:'';
+                            position: absolute;
+                            top: toREM(45);
+                            left: toREM(20);
+                            width: 1px;
+                            height: toREM(139);
+                            background: #ccc;
+    
+                        }
+                    }
+                }
+                .details{
+                    background: #f4f4f4;
+                    margin-left: toREM(103);
+                    @include borderBox;
+                    padding: toREM(26) toREM(20);
+                    display: flex;
+                    width: toREM(619);
+                    height: toREM(160);
+                    border-radius: 5px;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        width: toREM(30);
+                        height: 0;
+                        border: 15px solid #f4f4f4;
+                        border-left:8px solid transparent;
+                        border-top:7px solid transparent;
+                        border-bottom: 8px solid transparent;
+                        position: absolute;
+                        top: toREM(25);
+                        left: toREM(-68);
+                    }
+                    .text{
+                        .title{
+                            margin-top: toREM(-6);
+                            overflow: hidden;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                        }
+                        width: toREM(410);
+                        font-size: toREM(30);
+                        color: #666;
+                        .price{
+                            font-size: toREM(20);
+                            color: #999;
+                            span{
+                                font-size: toREM(30);
+                                color: #f88412;
+                            }
+                        }
+                    }
+                    img{
+                        width: toREM(133);
+                        height: toREM(110);
+                        border-radius: 5px;
+                        margin-left: toREM(30);
+                    }
+                }
+            }
+            
+        }
+    }
+}

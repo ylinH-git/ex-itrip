@@ -1,0 +1,153 @@
+#header {
+  height: 1.17333rem;
+  background: #1448ae;
+}
+
+#header .title {
+  font-size: 0.42667rem;
+  color: #ffffff;
+  text-align: center;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+}
+
+#header .title a {
+  position: absolute;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header .title a i {
+  display: block;
+  margin-top: 0.37333rem;
+  margin-left: 0.56rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .title a.back {
+  left: 0;
+}
+
+#header .title a.clear {
+  right: 0;
+  font-size: 0.37333rem;
+  bottom: 0;
+  font-weight: normal;
+  padding-right: 0.52rem;
+}
+
+#wrapper #scroller {
+  top: 1.17333rem;
+}
+
+#wrapper #scroller section {
+  padding: 0.21333rem 0rem;
+  font-size: 0.37333rem;
+  color: #666666;
+}
+
+#wrapper #scroller section .time {
+  padding-left: 0.32rem;
+}
+
+#wrapper #scroller section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 0.28rem;
+}
+
+#wrapper #scroller section .content:last-child aside i:after {
+  display: none;
+}
+
+#wrapper #scroller section .content aside i {
+  display: block;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -9.06667rem -3.4rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.38667rem;
+  background-color: #1ab2db;
+}
+
+#wrapper #scroller section .content aside i:after {
+  content: '';
+  position: absolute;
+  top: 0.6rem;
+  left: 0.26667rem;
+  width: 1px;
+  height: 1.85333rem;
+  background: #ccc;
+}
+
+#wrapper #scroller section .content .details {
+  background: #f4f4f4;
+  margin-left: 1.37333rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.34667rem 0.26667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8.25333rem;
+  height: 2.13333rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+#wrapper #scroller section .content .details::before {
+  content: '';
+  width: 0.4rem;
+  height: 0;
+  border: 15px solid #f4f4f4;
+  border-left: 8px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  top: 0.33333rem;
+  left: -0.90667rem;
+}
+
+#wrapper #scroller section .content .details .text {
+  width: 5.46667rem;
+  font-size: 0.4rem;
+  color: #666;
+}
+
+#wrapper #scroller section .content .details .text .title {
+  margin-top: -0.08rem;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+#wrapper #scroller section .content .details .text .price {
+  font-size: 0.26667rem;
+  color: #999;
+}
+
+#wrapper #scroller section .content .details .text .price span {
+  font-size: 0.4rem;
+  color: #f88412;
+}
+
+#wrapper #scroller section .content .details img {
+  width: 1.77333rem;
+  height: 1.46667rem;
+  border-radius: 5px;
+  margin-left: 0.4rem;
+}

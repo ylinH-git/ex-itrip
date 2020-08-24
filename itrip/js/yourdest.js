@@ -41,7 +41,7 @@ var destPage = new Vue({
             text: '浏览历史',
             classname: 'history',
             on: '',
-            url: '#'
+            url: 'history.html'
         }, {
             id: 3,
             text: '个 人',

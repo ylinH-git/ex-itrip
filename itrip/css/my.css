@@ -1,0 +1,209 @@
+#header {
+  height: 2.8rem;
+  background: #1448ae;
+}
+
+#header .title {
+  font-size: 0.42667rem;
+  color: #ffffff;
+  text-align: center;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+}
+
+#header .title a {
+  position: absolute;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header .title a i {
+  display: block;
+  margin-top: 0.37333rem;
+  margin-left: 0.56rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .title a.back {
+  left: 0;
+}
+
+#header .photoBox {
+  height: 2.8rem;
+  position: relative;
+}
+
+#header .photoBox .photo {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 3px solid #fff;
+  width: 2.26667rem;
+  height: 2.26667rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -6.37333rem -10.4rem;
+  background-color: #e0e2e7;
+  border-radius: 50%;
+}
+
+#header .photoBox .photo a {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0.97333rem;
+  height: 0.97333rem;
+  border-radius: 50%;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -4rem -8.06667rem;
+  background-color: #f2a410;
+}
+
+#wrapper #scroller section .infor {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 4.33333rem;
+  background: #edf1f2;
+  height: 8.22667rem;
+  text-align: center;
+}
+
+#wrapper #scroller section .infor .title {
+  font-size: 0.50667rem;
+}
+
+#wrapper #scroller section .infor .text {
+  font-size: 0.37333rem;
+  padding-top: 0.13333rem;
+  color: #a9aaad;
+}
+
+#wrapper #scroller section .infor .mon {
+  margin-top: 0.89333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrapper #scroller section .infor .mon .dis {
+  border-right: 1px dashed #cad7da;
+}
+
+#wrapper #scroller section .infor .mon .dis, #wrapper #scroller section .infor .mon .count {
+  text-align: center;
+  width: 50%;
+}
+
+#wrapper #scroller section .infor .mon .dis .mark, #wrapper #scroller section .infor .mon .count .mark {
+  margin-top: -0.2rem;
+  color: #676c73;
+  font-size: 0.84rem;
+}
+
+#wrapper #scroller section .infor .mon .dis .mark span, #wrapper #scroller section .infor .mon .count .mark span {
+  font-size: 0.49333rem;
+}
+
+#wrapper #scroller section .infor .mon .dis .type, #wrapper #scroller section .infor .mon .count .type {
+  color: #979da4;
+  font-size: 0.38667rem;
+}
+
+#wrapper #scroller section .order {
+  height: 2.84rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper #scroller section .order a {
+  text-align: center;
+  font-size: 0.37333rem;
+}
+
+#wrapper #scroller section .order a i {
+  display: block;
+  width: 1.01333rem;
+  height: 1.12rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.53333rem -9.42667rem;
+  margin-bottom: 0.2rem;
+}
+
+#wrapper #scroller section .order a i.all {
+  margin-left: 0.25333rem;
+}
+
+#wrapper #scroller section .order a i.noPay {
+  background-position: -1.98667rem -9.42667rem;
+}
+
+#wrapper #scroller section .order a i.noGo {
+  margin-left: 0.10667rem;
+  background-position: -3.56rem -9.42667rem;
+}
+
+#wrapper #scroller section .order a i.noCom {
+  margin-left: 0.05333rem;
+  background-position: -5.05333rem -9.42667rem;
+}
+
+#wrapper #scroller section nav ul {
+  padding: 0.2rem 0.85333rem;
+}
+
+#wrapper #scroller section nav ul li {
+  margin-bottom: 0.37333rem;
+  list-style: none;
+}
+
+#wrapper #scroller section nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.42667rem;
+  color: #676c73;
+  background: url(../images/icon/arrow_03.png) right center no-repeat;
+  background-size: 0.41333rem 0.70667rem;
+}
+
+#wrapper #scroller section nav ul li a i {
+  display: inline-block;
+  width: 0.93333rem;
+  height: 0.93333rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.58667rem -11.13333rem;
+}
+
+#wrapper #scroller section nav ul li a i.jour {
+  background-position: -2.10667rem -11.13333rem;
+}
+
+#wrapper #scroller section nav ul li a i.notes {
+  background-position: -3.62667rem -11.13333rem;
+}
+
+#wrapper #scroller section nav ul li a i.wealth {
+  background-position: -5.10667rem -11.13333rem;
+}
+
+#wrapper #scroller section nav ul li a span {
+  margin-top: -0.05333rem;
+  margin-left: 0.13333rem;
+  line-height: 0.93333rem;
+}

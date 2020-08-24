@@ -1,0 +1,219 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+#header{
+    height: toREM(88);
+    background: #1448ae;
+    .title{
+        font-size: toREM(32);
+        color: #ffffff;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-100) toREM(-32);
+            }
+            &.back{
+                left: 0;
+            }
+            &.search{
+                width: auto;
+                right: 0;
+                font-size: toREM(28);
+                bottom: 0;
+                font-weight: normal;
+                padding-right: toREM(39);
+            }
+           
+        }
+    }
+}
+#wrapper{
+    #scroller{
+        height: 100%;
+        top: toREM(88);
+        section{
+            padding: toREM(32) toREM(23);
+            height: 100%;
+            .ordersBox{
+                display: flex;
+                flex-wrap: wrap;
+                align-content:space-between ;
+                justify-content: center;
+                min-height: toREM(980);
+
+                .end{
+                    text-align: center;
+                    font-size: toREM(30);
+                    color: #999;
+                    .lastYear{
+                        margin-top: toREM(25);
+                        color: #666;
+                        width: toREM(270);
+                        height: toREM(50);
+                        border: 1px solid #dcdcdc;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        flex-wrap: nowrap;
+                        i{
+                            width: toREM(20);
+                            height: toREM(24);
+                            display: block;
+                            @include sprite();
+                            background-position:toREM(-147) toREM(-38);
+                            transform: rotate(180deg);
+                            margin-left:toREM(-30);
+                        }
+                    }
+                }
+                .order{
+                    @include borderBox;
+                    width: toREM(705);
+                    height: toREM(270);
+                    border-radius: 8px;
+                    background: #f4f4f4 ;
+                    padding-left: toREM(89);
+                    padding-top: toREM(35);
+                    padding-right: toREM(32);
+                    .title{
+                        position: relative;
+                        color: #333;
+                        font-size: toREM(34);
+                        margin-bottom: toREM(20);
+                        .price{
+                            float: right;
+                            font-size: toREM(30);
+                            color: #f88412;
+                        }
+                        &::before{
+                            position: absolute;
+                            top: toREM(4);
+                            left: toREM(-57);
+                            content: '';
+                            display: block;
+                            width: toREM(37);
+                            height: toREM(37);
+                            background: url(../images/icon/order0424.png) center center no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    .time{
+                        font-size: toREM(30);
+                        span{
+                            float: right;
+                        }
+                    }
+                    .btnBox{
+                        margin-left: toREM(117);
+                        display: flex;
+                        justify-content: space-between;
+                        button{
+                            margin-top: toREM(40);
+                            width: toREM(145);
+                            height: toREM(60);
+                            line-height: toREM(55);
+                            background-color: transparent;
+                            border: 1px solid #bbb;
+                            border-radius: 5px;
+                            font-size: toREM(30);
+                            color: #1ab2db;
+                            &.on{
+                                background: #1ab2db;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            
+            }
+            
+        }
+    }
+}
+#footer{
+    background: #999999;
+    display: flex;
+    justify-content: space-around;
+    a{
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-size: toREM(30);
+        &.filter{
+            i{
+                display: block;
+                width: toREM(41);
+                height: toREM(44);
+                @include sprite;
+                background-position: toREM(-45) toREM(-614);
+                margin-right: toREM(15);
+            }
+        }
+        &.time{
+            i{
+                display: block;
+                width: toREM(41);
+                height: toREM(50);
+                @include sprite;
+                background-position: toREM(-126) toREM(-610);
+                margin-right: toREM(15);
+            }
+        }
+        &.effective{
+            position: relative;
+            i{
+                display: block;
+                width: toREM(40);
+                height: toREM(40);
+                @include borderBox;
+                border: 1.5px solid #fff;
+                margin-left: toREM(10);
+            }
+            .right{
+                position: absolute;
+                width: toREM(50);
+                height: toREM(50);
+                top: toREM(-100);
+                right: toREM(-4);
+                @include sprite;
+                background-position: toREM(-225) toREM(-610);
+                &:after{
+                    content: '';
+                    display: block;
+                    width: toREM(10);
+                    height: toREM(23);
+                    border: 4px solid #37b4db;
+                    border-top: 0;
+                    border-left: 0;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: toREM(8);
+                    right: toREM(10);
+                }
+            }
+        }
+    }
+}

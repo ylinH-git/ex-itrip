@@ -63,3 +63,37 @@ Vue.component('tl-header', {
             </header>
     `
 });
+Vue.component('his-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>浏览历史<a href="#" class="clear">清空</a></div>
+        </header>
+    `
+});
+Vue.component('my-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>个人</div>
+            <div class="photoBox">
+            <div class="photo"><a href="#" class="tp"></a></div>
+        </div>
+        </header>
+    `
+});
+Vue.component('order-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>我的订单<a href="#" class="search">手机查单</a></div>
+        </header>
+    `
+});
+
+Vue.component('order-footer',{
+    template:`
+    <footer id="footer">
+    <a class="filter"><i></i><span>筛选</span></a>
+    <a class="time"><i></i><span>预定时间</span></a>
+    <a class="effective"><span>有效订单</span><i></i><span class="right"></span></a>
+</footer>
+    `
+})

@@ -1,0 +1,183 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+#header{
+    height: toREM(210);
+    background: #1448ae;
+    .title{
+        font-size: toREM(32);
+        color: #ffffff;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-100) toREM(-32);
+            }
+            &.back{
+                left: 0;
+            }
+        }
+    }
+    .photoBox{
+        height: toREM(210);
+        position: relative;
+        .photo{
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            border: 3px solid #fff;
+            width: toREM(170);
+            height: toREM(170);
+            @include sprite;
+            background-position: toREM(-478) toREM(-780);
+            background-color: #e0e2e7;
+            border-radius: 50%;
+            a{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: toREM(73);
+                height: toREM(73);
+                border-radius: 50%;
+                @include sprite;
+                background-position: toREM(-300) toREM(-605);
+                background-color: #f2a410;
+            }
+        }
+    }
+}
+#wrapper{
+    #scroller{
+        section{
+            .infor{
+                @include borderBox;
+                padding-top: toREM(325);
+                background: #edf1f2;
+                height: toREM(617);
+                text-align: center;
+                .title{
+                    font-size: toREM(38);
+                }
+                .text{
+                    font-size: toREM(28);
+                    padding-top: toREM(10);
+                    color: #a9aaad;
+                }
+                .mon{
+                    margin-top: toREM(67);
+                    display: flex;
+                    .dis{
+                        border-right: 1px dashed #cad7da;
+                    }
+                    .dis,.count{
+                        text-align: center;
+                        width: 50%;
+                        .mark{
+                            margin-top: toREM(-15);
+                            color: #676c73;
+                            span{
+                                font-size: toREM(37);
+                            }
+                            font-size: toREM(63);
+                        }
+                        .type{
+                            color: #979da4;
+                            font-size: toREM(29);
+                        }
+                    }
+                }
+            }
+            .order{
+                height: toREM(213);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                a{
+                    text-align: center;
+                    font-size: toREM(28);
+                    i{
+                        display: block;
+                        width: toREM(76);
+                        height: toREM(84);
+                        @include sprite;
+                        background-position: toREM(-40) toREM(-707);
+                        margin-bottom: toREM(15);
+                        &.all{
+                            margin-left: toREM(19);
+                        }
+                        &.noPay{
+                            background-position: toREM(-149) toREM(-707);
+                        }
+                        &.noGo{
+                            margin-left: toREM(8);
+                            background-position: toREM(-267) toREM(-707);
+                        }
+                        &.noCom{
+                            margin-left: toREM(4);
+                            background-position: toREM(-379) toREM(-707);
+                        }
+                    }
+                }
+            }
+            nav{
+                ul{
+                    padding:toREM(15) toREM(64);
+                    li{
+                        margin-bottom: toREM(28);
+                        list-style: none;
+                        a{
+                            display: flex;
+                            i{
+                                display: inline-block;
+                                width: toREM(70);
+                                height: toREM(70);
+                                @include sprite;
+                                background-position: toREM(-44) toREM(-835);
+                                &.jour{
+                                    background-position: toREM(-158) toREM(-835);
+                                }
+                                &.notes{
+                                    background-position: toREM(-272) toREM(-835);
+                                }
+                                &.wealth{
+                                    background-position: toREM(-383) toREM(-835);
+                                }
+                            }
+                            span{
+                                margin-top: toREM(-4);
+                                margin-left: toREM(10);
+                                line-height: toREM(70);
+                            }
+                            font-size: toREM(32);
+                            color: #676c73;
+                            background: url(../images/icon/arrow_03.png) right center no-repeat;
+                            background-size: toREM(31) toREM(53);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
