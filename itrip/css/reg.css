@@ -1,0 +1,140 @@
+#header {
+  height: 1.17333rem;
+  background: transparent;
+}
+
+#header .title {
+  font-size: 0.42667rem;
+  color: #000;
+  text-align: center;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+}
+
+#header .title a {
+  position: absolute;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header .title a i {
+  display: block;
+  margin-top: 0.37333rem;
+  margin-left: 0.56rem;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -0.73333rem -0.45333rem;
+}
+
+#header .title a.back {
+  left: 0;
+}
+
+#header .title a.reg {
+  color: #1448ae;
+  width: auto;
+  right: 0;
+  font-size: 0.37333rem;
+  bottom: 0;
+  font-weight: normal;
+  padding-right: 0.52rem;
+}
+
+#wrapper #scroller {
+  top: 1.17333rem;
+}
+
+#wrapper #scroller ::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+#wrapper #scroller :-ms-input-placeholder {
+  color: #ccc;
+}
+
+#wrapper #scroller ::-ms-input-placeholder {
+  color: #ccc;
+}
+
+#wrapper #scroller ::placeholder {
+  color: #ccc;
+}
+
+#wrapper #scroller ul {
+  padding: 1.62667rem 0.62667rem;
+}
+
+#wrapper #scroller ul li {
+  position: relative;
+  color: #666;
+  font-size: 0.37333rem;
+  padding-bottom: 0.29333rem;
+  margin-bottom: 0.38667rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#wrapper #scroller ul li span {
+  display: inline-block;
+  width: 1.73333rem;
+}
+
+#wrapper #scroller ul li input {
+  width: 5.33333rem;
+  color: #666;
+  margin-left: 0.4rem;
+  font-size: 0.37333rem;
+}
+
+#wrapper #scroller ul li a {
+  position: absolute;
+  background: url(../images/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+}
+
+#wrapper #scroller ul li a.clear {
+  display: none;
+  width: 0.66667rem;
+  height: 100%;
+  background-position: -3rem -0.4rem;
+  top: 0;
+  right: 0;
+}
+
+#wrapper #scroller ul li a.checktime {
+  padding: 0.06667rem 0.33333rem;
+  border-radius: 3px;
+  background: #cccccc;
+  color: #fff;
+  top: 0;
+  right: 0;
+}
+
+#wrapper #scroller ul li a.show {
+  width: 0.66667rem;
+  height: 100%;
+  background-position: -3.73333rem -0.4rem;
+  top: 0;
+  right: 0;
+}
+
+#wrapper #scroller ul li.pwdInput .clear {
+  top: 0;
+  right: 0.66667rem;
+}
+
+#wrapper #scroller ul .regBtn {
+  border: none;
+}
+
+#wrapper #scroller ul .regBtn button {
+  margin-top: 0.45333rem;
+  width: 100%;
+  height: 1.06667rem;
+  background: #f7c612;
+  font-size: 0.42667rem;
+  color: #fff;
+  border-radius: 5px;
+}

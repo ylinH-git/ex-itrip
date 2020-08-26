@@ -97,3 +97,18 @@ Vue.component('order-footer',{
 </footer>
     `
 })
+
+Vue.component('login-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>登录<a href="#" class="reg">注册</a></div>
+        </header>
+    `
+});
+Vue.component('reg-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>注册</div>
+        </header>
+    `
+});

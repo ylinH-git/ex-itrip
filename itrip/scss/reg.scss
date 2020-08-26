@@ -1,0 +1,128 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+#header{
+    height: toREM(88);
+    background: transparent;
+    .title{
+        font-size: toREM(32);
+        color: #000;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-55) toREM(-34);
+            }
+            &.back{
+                left: 0;
+            }
+            &.reg{
+                color: #1448ae;
+                width: auto;
+                right: 0;
+                font-size: toREM(28);
+                bottom: 0;
+                font-weight: normal;
+                padding-right: toREM(39);
+            }
+           
+        }
+    }
+}
+#wrapper{
+    #scroller{
+        top: toREM(88);
+        ::placeholder{
+            color: #ccc;
+        }
+        ul{
+            padding: toREM(122) toREM(47);
+            li{
+                position: relative;
+                color: #666;
+                font-size: toREM(28);
+                padding-bottom: toREM(22);
+                margin-bottom: toREM(29);
+                border-bottom: 1px solid #ccc;
+                span{
+                    display: inline-block;
+                    width:toREM(130)
+                }
+                input{
+                    width: toREM(400);
+                    color: #666;
+                    margin-left: toREM(30);
+                    font-size: toREM(28);
+                }
+                a{
+                    position: absolute;
+                    @include sprite;
+                    &.clear{
+                        display: none;
+                        width: toREM(50);
+                        height: 100%;
+                        background-position: toREM(-225) toREM(-30);
+                        top: 0;
+                        right: 0;
+                    }
+                    &.checktime{
+                        padding: toREM(5) toREM(25);
+                        border-radius: 3px;
+                        background: #cccccc;
+                        color: #fff;
+                        top: 0;
+                        right: 0;
+                    }
+                   
+                    &.show{
+                        width: toREM(50);
+                        height: 100%;
+                        background-position: toREM(-280) toREM(-30);
+                        top: 0;
+                        right: 0;
+                    }
+                }
+                &.pwdInput{
+                    .clear{
+                        top: 0;
+                        right: toREM(50);
+                    }
+                }
+            }
+            .regBtn{
+                border: none;
+                button{
+                    margin-top: toREM(34);
+                    width: 100%;
+                    height: toREM(80);
+                    background: #f7c612;
+                    font-size: toREM(32);
+                    color: #fff;
+                    border-radius: 5px;
+                }
+            }
+    
+        }
+    }
+}
