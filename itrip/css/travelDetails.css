@@ -1,0 +1,490 @@
+.banner {
+  position: relative;
+  height: 6.02667rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 6.02667rem;
+}
+
+.banner div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0.04rem 0.53333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 0;
+  color: #fff;
+  font-size: 0.4rem;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.banner div span {
+  font-size: 0.32rem;
+}
+
+#header {
+  height: 1.17333rem;
+}
+
+#header .title {
+  font-size: 0.42667rem;
+  color: #ffffff;
+  text-align: center;
+  height: 1.17333rem;
+  line-height: 1.17333rem;
+}
+
+#header .title a {
+  position: absolute;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header .title a i {
+  display: block;
+  margin-top: 0.37333rem;
+  margin-left: 0.56rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .title a.back {
+  left: 0;
+}
+
+#header .title a.share {
+  width: 0.66667rem;
+  height: 1.17333rem;
+  right: 1.26667rem;
+  top: 0;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -6rem -8rem;
+}
+
+#header .title a.more {
+  width: auto;
+  right: 0;
+  font-size: 0.26667rem;
+  bottom: 0;
+  font-weight: normal;
+  padding-right: 0.52rem;
+}
+
+#wrapper {
+  background: #f4f4f4;
+}
+
+#wrapper .desc {
+  padding: 0.4rem 0.52rem 0.33333rem;
+  background: #fff;
+  border-top: 1px solid rgba(204, 204, 204, 0.2);
+  border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+}
+
+#wrapper .desc .title {
+  font-size: 0.44rem;
+  color: #212121;
+}
+
+#wrapper .desc .heart {
+  display: block;
+  width: 2.13333rem;
+  height: 0.33333rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.48rem -5.61333rem;
+  margin-top: 0.30667rem;
+}
+
+#wrapper .desc .pt {
+  margin-top: 0.26667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper .desc .pt .price {
+  color: #ff4401;
+  font-size: 0.64rem;
+}
+
+#wrapper .desc .pt .price .yen {
+  margin-top: 0.2rem;
+  font-size: 0.24rem;
+  float: left;
+}
+
+#wrapper .desc .pt .price .per {
+  font-size: 0.4rem;
+  color: #a9a9a9;
+}
+
+#wrapper .desc .pt .tag {
+  color: #999;
+  font-size: 0.32rem;
+  margin-left: 0.66667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrapper .desc .pt .tag span {
+  padding: 0.06667rem 0.13333rem;
+  background: #eee;
+  border: 1px solid #bfbfbf;
+  margin-right: 0.25333rem;
+}
+
+#wrapper .discounts {
+  padding: 0.45333rem 0.52rem 0.33333rem;
+  background: #fdeacc;
+  margin-top: 0.26667rem;
+  position: relative;
+  border-top: 1px solid rgba(204, 204, 204, 0.2);
+  border-bottom: 1px solid rgba(204, 204, 204, 0.2);
+}
+
+#wrapper .discounts .right {
+  position: absolute;
+  top: 50%;
+  right: 0.4rem;
+  width: 0.66667rem;
+  height: 0.66667rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -1.86667rem -0.4rem;
+  -webkit-transform: rotate(180deg) translateY(60%);
+          transform: rotate(180deg) translateY(60%);
+}
+
+#wrapper .discounts > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.32rem;
+  color: #666;
+  margin-bottom: 0.24rem;
+}
+
+#wrapper .discounts > div .tag {
+  margin-top: 0.13333rem;
+  margin-right: 0.2rem;
+  height: 0.4rem;
+  padding: 0 0.04rem;
+  line-height: 0.4rem;
+  border: 1px solid #ef4242;
+  border-radius: 0.08rem;
+  color: #ef4242;
+}
+
+#wrapper .discounts > div.yh .tag {
+  background: #ef4242;
+  color: #fad599;
+}
+
+#wrapper .discounts > div li span {
+  font-size: 0.4rem;
+  color: #999;
+}
+
+#wrapper .comments {
+  margin-top: 0.26667rem;
+  background: #fff;
+  padding: 0.4rem 0.53333rem 0.53333rem;
+}
+
+#wrapper .comments .pfhcy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#wrapper .comments .pfhcy > div {
+  color: #666;
+  font-size: 0.4rem;
+  padding: 0.06667rem;
+}
+
+#wrapper .comments .pfhcy > div span {
+  color: #ff4401;
+}
+
+#wrapper .comments .pfhcy > div.pf {
+  border-right: 1px solid #ccc;
+  padding-right: 0.26667rem;
+}
+
+#wrapper .comments .pfhcy > div.cy {
+  font-size: 0.32rem;
+  padding-left: 0.26667rem;
+}
+
+#wrapper .comments .tagBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#wrapper .comments .tagBox span {
+  color: #666;
+  font-size: 0.32rem;
+  background: #f5f5f5;
+  margin-right: 0.44rem;
+  margin-top: 0.33333rem;
+  padding: 0 0.04rem;
+}
+
+#wrapper .comments .comment {
+  font-size: 0.34667rem;
+  margin-top: 0.46667rem;
+  padding-top: 0.37333rem;
+  border-top: 1px solid #ccc;
+}
+
+#wrapper .comments .comment .nt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrapper .comments .comment .content {
+  text-align: justify;
+}
+
+#wrapper .comments .comment .btnBox {
+  text-align: center;
+}
+
+#wrapper .comments .comment .btnBox button {
+  width: 3.73333rem;
+  height: 0.8rem;
+  border-radius: 0.08rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid #1ab2db;
+  font-size: 0.34667rem;
+  color: #1ab2db;
+  margin-top: 0.4rem;
+}
+
+#wrapper .detailsBox {
+  margin-top: 0.26667rem;
+  background: #fff;
+}
+
+#wrapper .detailsBox nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#wrapper .detailsBox nav ul li {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  font-size: 0.4rem;
+  color: #666;
+}
+
+#wrapper .detailsBox nav ul li a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 1.44rem;
+  line-height: 1.44rem;
+}
+
+#wrapper .detailsBox nav ul li a.on {
+  border-bottom: 3px solid #f7c612;
+  color: #1ab2db;
+}
+
+#wrapper .detailsBox .content img {
+  display: block;
+  width: 100%;
+}
+
+#wrapper .detailsBox .content .noticeBox {
+  position: relative;
+  text-align: justify;
+  font-size: 0.37333rem;
+  color: #252525;
+  padding: 0.72rem 0.96rem;
+}
+
+#wrapper .detailsBox .content .noticeBox .title {
+  margin-top: 0.37333rem;
+  margin-bottom: 0.33333rem;
+  font-size: 0.4rem;
+  color: #1ab2db;
+}
+
+#wrapper .detailsBox .content .noticeBox:before {
+  content: '';
+  position: absolute;
+  top: 0.73333rem;
+  left: 0.13333rem;
+  width: 0.6rem;
+  height: 0.8rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -4.72rem -5.46667rem;
+}
+
+#wrapper .detailsBox .content .jourDay {
+  position: relative;
+  padding: 0.74667rem 1.13333rem;
+}
+
+#wrapper .detailsBox .content .jourDay .dayTag {
+  position: absolute;
+  left: 0.06667rem;
+  top: 0.8rem;
+  width: 1.2rem;
+  height: 0.53333rem;
+  line-height: 0.53333rem;
+  font-size: 0.24rem;
+  color: #fff;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -3.33333rem -5.50667rem;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime {
+  border-left: 1px dotted #2f90bb;
+  padding-left: 0.30667rem;
+  font-size: 0.32rem;
+  color: #666;
+  font-weight: bold;
+  padding-bottom: 0.34667rem;
+  margin-bottom: 0.02667rem;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime .text {
+  position: relative;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime .text.text::before {
+  position: absolute;
+  left: -0.4rem;
+  top: 0.13333rem;
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 50%;
+  content: '';
+  background: #2f90bb;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime .text span {
+  margin-left: 0.33333rem;
+  font-weight: normal;
+  border: 1px solid #ccc;
+  color: #999;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime .imgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 6.4rem;
+  margin-top: 0.26667rem;
+  margin-left: 0.96rem;
+}
+
+#wrapper .detailsBox .content .jourDay .jourTime .imgBox img {
+  padding-bottom: 0.06667rem;
+  padding-right: 0.13333rem;
+  width: 3.06667rem;
+  height: 200;
+}
+
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer a {
+  height: 100%;
+  border-right: 1px solid #dcdcdc;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#footer a.book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f1a30f;
+  font-size: 0.50667rem;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  color: #fff;
+}
+
+#footer a.like {
+  background-position: -5.86667rem -4.06667rem;
+}
+
+#footer a.add {
+  background-position: -6.94667rem -4.04rem;
+}
+
+#footer a.contact {
+  background-position: -8rem -4.04rem;
+}

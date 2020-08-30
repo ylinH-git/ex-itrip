@@ -49,7 +49,7 @@ var historyPage = new Vue({
             text: '个 人',
             classname: 'my',
             on: '',
-            url: '#'
+            url: 'my.html'
         }],
         history:[
             {

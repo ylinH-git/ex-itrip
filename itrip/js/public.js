@@ -87,7 +87,13 @@ Vue.component('order-header', {
         </header>
     `
 });
-
+Vue.component('details-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>产品详情<a href="#" class="share"></a> <a href="#" class="more">• • •</a></div>
+        </header>
+    `
+});
 Vue.component('order-footer',{
     template:`
     <footer id="footer">
@@ -97,18 +103,77 @@ Vue.component('order-footer',{
 </footer>
     `
 })
+Vue.component('td-footer',{
+    template:`
+    <footer id="footer">
+        <a href="#" class="like"></a>
+        <a href="#" class="add"></a>
+        <a href="#" class="contact"></a>
+        <a href="#" class="book">开始预订</a>
+    </footer>
+    `
+})
 
 Vue.component('login-header', {
     template: `
         <header id="header">
-            <div class="title"><a href="#" class="back"><i></i></a>登录<a href="#" class="reg">注册</a></div>
+            <div class="title"><a href="#" class="back"><i></i></a>登录<a href="reg.html" class="reg">注册</a></div>
         </header>
     `
 });
 Vue.component('reg-header', {
     template: `
         <header id="header">
-            <div class="title"><a href="#" class="back"><i></i></a>注册</div>
+            <div class="title"><a href="login.html" class="back"><i></i></a>注册</div>
         </header>
     `
 });
+Vue.component('banner', {
+    props: ['imgurl'],
+    template: `
+    <section class="banner">
+        <ul class="slide">
+            <li v-for="img in imgurl"><img :src="img"  alt=""></li>
+            <li v-if="index==0" v-for="(img,index) in imgurl"><img :src="img"  alt=""></li>
+        </ul>
+        <ul class="slide-page">
+            <li v-if="index==0" v-for="(img,index) in imgurl" class="on"><a href="#"></a></li>
+            <li v-if="index!=0" v-for="(img,index) in imgurl"><a href="#"></a></li>
+        </ul>
+    </section>`,
+    methods: {
+        slideAni: function () {
+            var page = -1;
+            var stop = false;
+            var currImg = 0
+
+            function slide() {
+                if (!stop) {
+                    page++;
+                    currImg++;
+                    if (currImg > $('.slide img').length) {
+                        $('.slide').css('left', 0);
+                        page = 1;
+                        currImg = 2;
+                    }
+                    $('.slide').animate({
+                        left: -page * 10 + 'rem'
+                    });
+                    if (page <= 3) {
+                        $('.slide-page>li').removeClass('on').eq(page).addClass('on');
+                    } else {
+                        $('.slide-page>li').removeClass('on').eq(0).addClass('on');
+                    }
+                    if (page > 3) {
+                        page = -1;
+                    }
+                }
+                setTimeout(slide, 2000)
+            }
+            slide();
+        }
+    },
+    mounted: function () {
+        this.slideAni();
+    }
+})

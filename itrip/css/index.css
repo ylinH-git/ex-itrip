@@ -265,6 +265,70 @@ input:-ms-input-placeholder {
   clear: both;
 }
 
+.banner {
+  width: 10rem;
+  height: 6.65333rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .slide {
+  width: 50rem;
+  height: 6.65333rem;
+  position: absolute;
+  left: 0px;
+}
+
+.banner .slide li {
+  list-style: none;
+  float: left;
+}
+
+.banner .slide li img {
+  display: block;
+  width: 10rem;
+}
+
+.banner .slide-page {
+  position: absolute;
+  margin: 0;
+  right: 0.54667rem;
+  bottom: 0.29333rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0.82667rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.banner .slide-page li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  width: 0.13333rem;
+  border-radius: 50%;
+  height: 0.13333rem;
+  border: 0.02rem solid #0099cc;
+}
+
+.banner .slide-page li.on {
+  width: 0.17333rem;
+  height: 0.17333rem;
+  background: #0099cc;
+}
+
+.banner .slide-page li a {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 a {
   display: block;
   font-family: '微软雅黑';

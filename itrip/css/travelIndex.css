@@ -1,0 +1,302 @@
+.banner {
+  height: 6.02667rem;
+}
+
+#header {
+  height: 1.17333rem;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.17333rem;
+  height: 1.17333rem;
+}
+
+#header a i {
+  display: block;
+  margin-top: 0.30667rem;
+  margin-left: 0.56rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  width: 0.26667rem;
+  height: 0.44rem;
+  background-position: -1.33333rem -0.42667rem;
+}
+
+#header .iconBox {
+  position: absolute;
+  top: 0.21333rem;
+  left: 1.06667rem;
+  width: 2.81333rem;
+  height: 0.70667rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header .iconBox .pos {
+  font-size: 0.37333rem;
+  color: #fff;
+  width: 1.90667rem;
+  border-right: solid 1px rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .iconBox .pos i {
+  width: 0.30667rem;
+  height: 0.41333rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -8.32rem -3.50667rem;
+}
+
+#header .iconBox .pos span {
+  padding-left: 0.13333rem;
+}
+
+#header .iconBox .searchIcon {
+  top: 0.13333rem;
+  left: 2.17333rem;
+  width: 0.44rem;
+  height: 0.42667rem;
+}
+
+#header input {
+  width: 8.22667rem;
+  height: 0.70667rem;
+  margin-left: 1.13333rem;
+  margin-top: 0.21333rem;
+  padding-left: 2.81333rem;
+  padding-bottom: 0.05333rem;
+}
+
+.travelType .navBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.travelType .navBox a {
+  padding: 0.52rem 0 0.4rem;
+  text-align: center;
+}
+
+.travelType .navBox a i {
+  display: block;
+  height: 1.33333rem;
+  width: 1.33333rem;
+  border-radius: 50%;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -0.24rem -3.93333rem;
+  background-color: #4ca8f5;
+}
+
+.travelType .navBox a.gny i {
+  background-position: -1.62667rem -3.97333rem;
+  background-color: #ff9f26;
+}
+
+.travelType .navBox a.zby i {
+  background-position: -3.02667rem -3.97333rem;
+  background-color: #f75232;
+}
+
+.travelType .navBox a.ddy i {
+  background-position: -4.44rem -3.97333rem;
+  background-color: #96ea3c;
+}
+
+.travelType .navBox a .text {
+  margin-top: 0.24rem;
+  font-size: 0.33333rem;
+  color: #666;
+}
+
+.travelShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.travelShow li {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1.5px solid #cecece;
+  height: 4.26667rem;
+}
+
+.travelShow li:nth-of-type(1) {
+  width: 6rem;
+}
+
+.travelShow li:nth-of-type(2) {
+  width: 4rem;
+}
+
+.travelShow li:nth-of-type(3) {
+  width: 4rem;
+}
+
+.travelShow li:nth-of-type(4) {
+  width: 6rem;
+}
+
+.travelShow li a .tag {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.06667rem;
+  height: 1.06667rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -6.6rem -9.49333rem;
+}
+
+.travelShow li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.travelList > .title {
+  padding-top: 0.4rem;
+  padding-left: 0.32rem;
+  padding-bottom: 0.21333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.travelList > .title i {
+  display: block;
+  width: 0.66667rem;
+  height: 0.6rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -6.32rem -3.45333rem;
+}
+
+.travelList > .title div {
+  color: #4ca8f5;
+  font-size: 0.42667rem;
+  padding-right: 0.13333rem;
+}
+
+.travelList > .title img {
+  height: 0.42667rem;
+}
+
+.itemBox {
+  padding-left: 0.32rem;
+}
+
+.itemBox .title {
+  font-size: 0.42667rem;
+  color: #3f69bd;
+  line-height: 0.61333rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.34667rem;
+  padding-bottom: 0.18667rem;
+}
+
+.itemBox .title i {
+  display: inline-block;
+  width: 0.61333rem;
+  height: 0.64rem;
+  background: url(../images/icon/sprites.png) 0 0 no-repeat;
+  background-size: 10rem auto;
+  background-position: -5.05333rem -1.38667rem;
+  margin-right: 0.14667rem;
+}
+
+.itemBox .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.itemBox .items .item {
+  width: 4.58667rem;
+  height: 4.8rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 0.32rem;
+  margin-right: 0.21333rem;
+  margin-bottom: 0.21333rem;
+  border: solid 1px #cccccc;
+}
+
+.itemBox .items .item img {
+  display: block;
+  width: 4.58667rem;
+  height: 2.86667rem;
+}
+
+.itemBox .items .item .text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.2rem 0.2rem 0rem 0.18667rem;
+  color: #333333;
+  font-size: 0.37333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.itemBox .items .item .detail {
+  margin: 0.13333rem 0.21333rem 0rem 0.2rem;
+  font-size: 0.32rem;
+  color: #999999;
+}
+
+.itemBox .items .item .detail .seat {
+  padding-top: 0.06667rem;
+  float: left;
+}
+
+.itemBox .items .item .detail .price {
+  float: right;
+  font-size: 0.24rem;
+}
+
+.itemBox .items .item .detail .price .yen, .itemBox .items .item .detail .price .mon {
+  color: #ff9900;
+}
+
+.itemBox .items .item .detail .price .yen.mon, .itemBox .items .item .detail .price .mon.mon {
+  font-size: 0.37333rem;
+}
+
+.itemBox .items .item .detail .price .yen.yen, .itemBox .items .item .detail .price .mon.yen {
+  float: left;
+}

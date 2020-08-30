@@ -16,7 +16,7 @@ Vue.component('my-content',{
         </div>
     </div>
     <div class="order">
-        <a href="#">
+        <a href="myorder.html">
             <i class="all"></i>
             全部订单
         </a>
@@ -70,7 +70,7 @@ var myPage = new Vue({
             text: '个 人',
             classname: 'my',
             on: 'on',
-            url: '#'
+            url: 'my.html'
         }],
     }
 });

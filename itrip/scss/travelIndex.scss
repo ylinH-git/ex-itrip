@@ -1,0 +1,270 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/icon/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+.banner{
+    height: toREM(452);
+}
+#header {
+    height: toREM(88);
+    background: rgba(0,0,0,0.4);
+    display: flex;
+
+    a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: toREM(88);
+        height: toREM(88);
+
+        i {
+            display: block;
+            margin-top: toREM(23);
+            margin-left: toREM(42);
+            @include sprite;
+            width: toREM(20);
+            height: toREM(33);
+            background-position: toREM(-100) toREM(-32);
+        }
+
+    }
+
+    .iconBox {
+        position: absolute;
+        top: toREM(16);
+        left: toREM(80);
+        width: toREM(211);
+        height: toREM(53);
+        display: flex;
+
+        .pos {
+            font-size: toREM(28);
+            color: #fff;
+            width: toREM(143);
+            border-right: solid 1px rgba(255, 255, 255, 0.5);
+            ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                width: toREM(23);
+                height: toREM(31);
+                @include sprite;
+                background-position: toREM(-624) toREM(-263);
+            }
+
+            span {
+                padding-left: toREM(10);
+            }
+        }
+
+        .searchIcon {
+            top: toREM(10);
+            left: toREM(163);
+            width: toREM(33);
+            height: toREM(32);
+        }
+    }
+
+    input {
+        width: toREM(617);
+        height: toREM(53);
+        margin-left: toREM(85);
+        margin-top: toREM(16);
+        padding-left: toREM(211);
+        padding-bottom: toREM(4);
+    }
+}
+
+.travelType{
+    .navBox{
+        display: flex;
+        justify-content: space-around;
+        a{
+            padding: toREM(39) 0 toREM(30);
+            text-align: center;
+            i{
+                display: block;
+                height: toREM(100);
+                width: toREM(100);
+                border-radius: 50%;
+                @include sprite;
+                background-position: toREM(-18) toREM(-295);
+                background-color: #4ca8f5;
+            }
+            &.gny{
+                i{
+                    background-position: toREM(-122) toREM(-298);
+                    background-color: #ff9f26;
+                }
+            }
+            &.zby{
+                i{
+                    background-position: toREM(-227) toREM(-298);
+                    background-color: #f75232;
+                }
+            }
+            &.ddy{
+                i{
+                    background-position: toREM(-333) toREM(-298);
+                    background-color: #96ea3c;
+                }
+            }
+            .text{
+                margin-top: toREM(18);
+                font-size: toREM(25);
+                color: #666;
+            }
+        }
+        
+    }
+}
+
+//travelShow
+.travelShow{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        position: relative;
+        @include borderBox;
+        border: 1.5px solid #cecece;
+        &:nth-of-type(1){
+            width: toREM(450);
+        }
+        &:nth-of-type(2){
+            width: toREM(300);
+        }
+        &:nth-of-type(3){
+            width: toREM(300);
+        }
+        &:nth-of-type(4){
+            width: toREM(450);
+        }
+        height: toREM(320);
+        a{
+            
+            .tag{
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: toREM(80);
+                height: toREM(80);
+                @include sprite;
+                background-position: toREM(-495) toREM(-712);
+            }
+            img{
+                display: block;
+                width: 100%;
+                height: 100%; 
+            }
+        }
+        
+    }
+}
+.travelList{
+    >.title{
+        padding-top: toREM(30);
+        padding-left:toREM(24);
+        padding-bottom: toREM(16);
+        display: flex;
+        align-items: flex-end;
+        i{
+            display: block;
+            width: toREM(50);
+            height: toREM(45);
+            @include sprite();
+            background-position: toREM(-474) toREM(-259);
+        }
+        div{
+            color: #4ca8f5;
+            font-size: toREM(32);
+            padding-right: toREM(10);
+        }
+        img{
+            height: toREM(32);
+        }
+    }
+}
+
+// itemBox
+.itemBox{
+    padding-left:toREM(24);
+    .title{
+        font-size: toREM(32);
+        color:#3f69bd;
+        line-height: toREM(46);
+        display: flex;
+        padding-top: toREM(26);
+        padding-bottom: toREM(14);
+        i{
+            display: inline-block;
+            width: toREM(46);
+            height: toREM(48);
+            @include sprite;
+            background-position: toREM(-379) toREM(-104);
+            margin-right: toREM(11);
+        }
+    }
+    .items{
+        display: flex;
+        flex-flow: wrap;
+        .item{
+            width: toREM(344);
+            height: toREM(360);
+            @include borderBox;
+            padding-bottom: toREM(24);
+            margin-right: toREM(16);
+            margin-bottom: toREM(16);
+            border: solid 1px #cccccc;
+            img{
+                display: block;
+                width: toREM(344);
+                height: toREM(215);
+            }
+            .text{
+                @include borderBox;
+                margin: toREM(15) toREM(15) toREM(0) toREM(14);
+                color: #333333;
+                font-size: toREM(28);
+                overflow:hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                display:-webkit-box;
+                -webkit-box-orient:vertical;
+            }
+            .detail{
+                margin: toREM(10) toREM(16) toREM(0) toREM(15);
+                font-size: toREM(24);
+                color: #999999;
+                .seat{
+                    padding-top: toREM(5);
+                    float: left;
+                }
+                .price{
+                    float: right;
+                    font-size: toREM(18);
+                    .yen,.mon{
+                        color: #ff9900;
+                        &.mon{
+                            font-size: toREM(28);
+                        }
+                        &.yen{
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

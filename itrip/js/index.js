@@ -1,62 +1,11 @@
 // banner
-
-
-Vue.component('banner', {
-    props: ['imgurl'],
-    template: `
-    <section class="banner">
-        <ul class="slide">
-            <li v-for="img in imgurl"><img :src="img"  alt=""></li>
-            <li v-if="index==0" v-for="(img,index) in imgurl"><img :src="img"  alt=""></li>
-        </ul>
-        <ul class="slide-page">
-            <li v-if="index==0" v-for="(img,index) in imgurl" class="on"><a href="#"></a></li>
-            <li v-if="index!=0" v-for="(img,index) in imgurl"><a href="#"></a></li>
-        </ul>
-    </section>`,
-    methods: {
-        slideAni: function () {
-            var page = -1;
-            var stop = false;
-            var currImg = 0
-
-            function slide() {
-                if (!stop) {
-                    page++;
-                    currImg++;
-                    if (currImg > $('.slide img').length) {
-                        $('.slide').css('left', 0);
-                        page = 1;
-                        currImg = 2;
-                    }
-                    $('.slide').animate({
-                        left: -page * 10 + 'rem'
-                    });
-                    if (page <= 3) {
-                        $('.slide-page>li').removeClass('on').eq(page).addClass('on');
-                    } else {
-                        $('.slide-page>li').removeClass('on').eq(0).addClass('on');
-                    }
-                    if (page > 3) {
-                        page = -1;
-                    }
-                }
-                setTimeout(slide, 2000)
-            }
-            slide();
-        }
-    },
-    mounted: function () {
-        this.slideAni();
-    }
-})
 // navbox
 Vue.component('nav-box-item', {
     props: ['item'],
     template: `
          <ul class="clearfix">
              <li :key="deteil.id" v-for="(deteil,name) in item" :class="deteil.pos">
-                  <a href="#" :class="name">
+                  <a :href="deteil.href" :class="name">
                      {{deteil.text}}
                      <div v-if="deteil.circle==true" class='circle'>
                          <i class="top"></i>
@@ -134,27 +83,32 @@ var indexPage = new Vue({
                 trip: {
                     id: 0,
                     pos: 'leftImg',
-                    text: '旅游'
+                    text: '旅游',
+                    href:'travelIndex.html'
                 },
                 cj: {
                     id: 1,
                     pos: 'rightImg',
-                    text: '出 境 游'
+                    text: '出 境 游',
+                    href:'#'
                 },
                 gn: {
                     id: 2,
                     pos: 'rightImg',
-                    text: '国 内 游'
+                    text: '国 内 游',
+                    href:'#'
                 },
                 zb: {
                     id: 3,
                     pos: 'rightImg',
-                    text: '周 边 游'
+                    text: '周 边 游',
+                    href:'#'
                 },
                 dd: {
                     id: 4,
                     pos: 'rightImg',
-                    text: '当 地 游'
+                    text: '当 地 游',
+                    href:'#'
                 },
             },
             {
@@ -243,7 +197,7 @@ var indexPage = new Vue({
             text: '个 人',
             classname: 'my',
             on: '',
-            url:'#'
+            url:'my.html'
         }
     ]
     },

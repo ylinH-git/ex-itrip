@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelIndex</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/travelDetails.css">
+</head>
+
+<body>
+    <div id="tDetails">
+        <details-header></details-header>
+        <wrapper>
+            <template v-slot:inner-scroller>
+                <d-banner :imgurl="imgurls"></d-banner>
+                <section>
+                    <div class="desc">
+                        <div class="title">海南三亚5日4晚半自助游(5钻)【壕减3000】喜来登品牌海景房</div>
+                        <i class="heart"></i>
+                        <div class="pt">
+                            <div class="price">
+                                <span class="yen">&yen;</span> 2810<span class="per">/人起</span>
+                            </div>
+                            <div class="tag">
+                                <span>旅游狂欢趴</span>
+                                <span>三亚湾</span>
+                                <span>蜈支洲岛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discounts">
+                        <div class="lj">
+                            <div class="tag">立减</div>
+                            <ul>
+                                <li><span>&bull;</span> 多人优惠，2人起立减200元/单</li>
+                                <li><span>&bull;</span>【提前5天预定，5成人，优惠300/单】 3/01-4/30</li>
+                            </ul>
+                        </div>
+                        <div class="yh">
+                            <div class="tag">优惠</div>
+                            <ul>
+                                <li><span>&bull;</span> 勾搭去旅游限时优惠券</li>
+                                <li><span>&bull;</span>【攻略专享】旅游优惠券</li>
+                            </ul>
+                        </div>
+                        <a class="right"></a>
+                    </div>
+                    <div class="comments">
+                        <div class="pfhcy">
+                            <div class="pf"><span>4.9</span>分点评</div>
+                            <div class="cy"><span>1126</span>人出游</div>
+                        </div>
+                        <div class="tagBox">
+                            <span>导游讲解4.8分</span>
+                            <span>领队服务4.7分</span>
+                            <span>形程安排4.6分</span>
+                            <span>描述相符4.8分</span>
+                            <span>好评率98%分</span>
+                        </div>
+                        <div class="comment">
+                            <div class="nt"><span class="name">思****209</span><span class="time">2016-12-01</span></div>
+                            <div class="content">凌晨到达的，住宿很满意，导游十分负责任。这次旅行还是很尽兴的，三亚很美，蜈支洲岛很仙。王导还自掏腰包供应水和吃水果，感谢！</div>
+                            <div class="btnBox">
+                                <button>查看全部评价</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detailsBox">
+                        <nav>
+                            <ul>
+                                <li><router-link to="/feature">产品特色</router-link></li>
+                                <li><router-link to="/jour">形程详情</router-link></li>
+                                <li><router-link to="/notice">预定须知</router-link></li>
+                            </ul>
+                        </nav>
+                        <router-view></router-view>
+                    </div>
+                </section>
+            </template>
+        </wrapper>
+        <td-footer></td-footer>
+    </div>
+    <script src="lib/flexible.js"></script>
+    <script src="lib/iscroll-4/iscroll-4/src/iscroll.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="lib/vue/vue.js"></script>
+    <script src="node_modules/vue-router/dist/vue-router.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/travelDetails.js"></script>
+</body>
+
+</html>

@@ -27,7 +27,7 @@ const content = {
     <div class="contentBox">
         <ul class="content" v-if="items.id==id" v-for=" items in list ">
             <li :key="item.id" v-for="item in items.content">
-                <a href="#">
+                <a :href="item.href">
                     <img :src="item.url" alt="">
                     <div class="details">
                         <div class="title">{{item.title}}</div>

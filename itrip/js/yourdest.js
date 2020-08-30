@@ -47,7 +47,7 @@ var destPage = new Vue({
             text: '个 人',
             classname: 'my',
             on: '',
-            url: '#'
+            url: 'my.html'
         }],
         nav: [{
                 id: 0,
