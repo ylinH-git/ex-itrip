@@ -1,0 +1,246 @@
+@function toREM($px) {
+    @return $px/75*1rem;
+}
+
+@mixin borderBox {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin sprite {
+    background: url(../images/sprites.png) 0 0 no-repeat;
+    background-size: 10rem auto;
+}
+#header{
+    height: toREM(88);
+    background: #1448ae;
+    .title{
+        font-size: toREM(32);
+        color: #ffffff;
+        text-align: center;
+        height: toREM(88);
+        line-height: toREM(88);
+        a{
+            position: absolute;
+            top: 0;
+            width: toREM(88);
+            height: toREM(88);
+            i{
+                display: block;
+                margin-top: toREM(28);
+                margin-left: toREM(42);
+                @include sprite;
+                width: toREM(20);
+                height: toREM(33);
+                background-position: toREM(-100) toREM(-32);
+            }
+            &.back{
+                left: 0;
+            }
+            &.intro{
+                width: auto;
+                right: 0;
+                font-size: toREM(28);
+                bottom: 0;
+                font-weight: normal;
+                padding-right: toREM(39);
+            }
+           
+        }
+    }
+}
+#wrapper{
+    background: #eeeeee;
+    top: toREM(80);
+    #calender{
+        .dw-cal-ev .dw-cal-day-fg {
+            padding-bottom: toREM(15);
+        }
+        .dw-cal{
+            width: auto;
+        }  
+        .mbsc-mobiscroll .dw-cal-days {
+            margin-bottom: toREM(10);
+        }
+        .mbsc-mobiscroll .dwwr {
+            min-width: 16em;
+            background: #fff;
+            color: #454545;
+        }
+        .dw-cal-btnc-ym .dw-cal-month, .dw-cal-btnc-ym .dw-cal-year {
+            display: block;
+            margin: 0 toREM(36);
+            font-size: toREM(36);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #333;
+        }
+        .mbsc-mobiscroll .dw-cal-days th {
+            font-size:toREM(34);
+            font-family: '黑体';
+            font-weight: normal;
+            color: #1ab3db;
+            border-bottom: 1px solid #1ab3db;
+        }    
+        .mbsc-mobiscroll .dw-cal-day-fg {
+            font-size: toREM(34);
+        }
+        .mbsc-mobiscroll .dw-cal-day-m-c {
+            display: inline-block;
+            vertical-align: top;
+            width: 10px;
+            height: 4px;
+            margin: 0 1px;
+            background: #4eccc4;
+            border-radius: 3px;
+        }
+        .dw-cal-day-ic-c, .dw-cal-day-txt-c {
+            position: absolute;
+            left: toREM(-5);
+            right: 0;
+            bottom: toREM(-5);
+            overflow: hidden;
+        }
+        .mbsc-mobiscroll .dw-cal-day-txt {
+            font-size: toREM(26);
+            color: #1ab2db;
+            background:none;
+        }
+    }
+    .tandN{
+        .list{
+            margin-top: toREM(20);
+            background: #fff;
+            li{
+                
+                border-bottom: 1px solid #dcdcdc;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:toREM(25) 0 ;
+                margin-left:toREM(47);
+                &:last-child{
+                    border-bottom: 0;
+                }
+                .notice{
+                    position: relative;
+                    text-align: justify;
+                    padding: 0 toREM(70) 0 toREM(40);
+                    font-size: toREM(24);
+                    color: #999;
+                    span{
+                        color: #f88412;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: toREM(5);
+                        left: 0;
+                        @include sprite();
+                        height: toREM(30);
+                        width: toREM(30);
+                        background-position: toREM(-435) toREM(-416);
+                    }
+                }
+                .text{
+                    display: flex;
+                    align-items: center;
+                    input{
+                        position: relative;
+                        width: toREM(40);
+                        height: toREM(40);
+                        border: 1px solid #dcdcdc;
+                        border-radius: 5px;
+                        margin-right: toREM(20);
+                        &:checked{
+                           background: #1ab2db;
+                           border: 1px solid #1ab2db;
+                          }
+                       &:checked::after {
+                            content: '';
+                            position: absolute;
+                            top: 40%;
+                            left: 50%;
+                            width: 35%;
+                            height: 60%;
+                            border: toREM(7) solid #fff;
+                            border-left: 0;
+                            border-top: 0;
+                            border-radius: 0;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                          }
+                    }
+                    span{
+                        font-size: toREM(30);
+                        color: #666;
+                        &.price{
+                            padding-left: toREM(25);
+                            font-size: toREM(28);
+                            color: #f88412;
+                        }
+                        &.age{
+                            padding-left: toREM(25);
+                            font-size: toREM(28);
+                            color: #999;
+                        }
+                    }
+                } 
+                .btnBox{
+                    margin-right: toREM(45);
+                    @include borderBox();
+                    background: #e5e5e5;
+                    display: flex;
+                    width: toREM(182);
+                    height: toREM(58);
+                    line-height: toREM(58);
+                    border: 1px solid #ccc;
+                    a{
+                        width: toREM(53);
+                        text-align: center;
+                        font-size: toREM(30);
+                        background: #fff;
+                    }
+                    .num{
+                        font-size: toREM(32);
+                        width: toREM(79);
+                        text-align: center;
+                        
+                    }
+                }    
+            }
+        }
+    }
+}
+#footer{
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .left{
+        height: 100%;
+        line-height: toREM(100);
+        flex-grow: 1;
+        color: #f88412;
+        span{
+            padding-left: toREM(15);
+            font-size: toREM(28);
+        }
+        .total{
+            font-size: toREM(34);
+        }
+    }
+    .right{
+        height: 100%;
+        line-height: toREM(100);
+        flex-grow: 1;
+        background: #f1a30f;
+        color: #fff;
+        span{
+            padding-left: toREM(10);
+            font-size: toREM(30);
+        }
+        .next{
+            font-size: toREM(38);
+        }
+    }
+}

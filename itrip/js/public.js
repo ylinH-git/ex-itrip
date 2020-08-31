@@ -87,6 +87,13 @@ Vue.component('order-header', {
         </header>
     `
 });
+Vue.component('time-header', {
+    template: `
+        <header id="header">
+            <div class="title"><a href="#" class="back"><i></i></a>选择日期和人数<a href="#" class="intro ">起价说明</a></div>
+        </header>
+    `
+});
 Vue.component('details-header', {
     template: `
         <header id="header">
@@ -102,6 +109,28 @@ Vue.component('order-footer',{
     <a class="effective"><span>有效订单</span><i></i><span class="right"></span></a>
 </footer>
     `
+})
+Vue.component('time-footer',{
+    data:function(){
+        return{total:6318}
+    },
+    template:`
+    <footer id="footer">
+        <a class="left">
+            <span class="total">总额：&yen;{{total}}</span>
+            <span>明细></span>
+        </a>
+        <a class="right">
+            <span class="next">下一步</span>
+            <span>选择资源</span>
+        </a>
+    </footer>
+    `,
+    mounted(){
+        add.$on('totalChange',total=>{
+            this.total=total;
+        })
+    }
 })
 Vue.component('td-footer',{
     template:`
